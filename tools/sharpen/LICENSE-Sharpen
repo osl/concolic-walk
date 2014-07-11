@@ -1,0 +1,25 @@
+Sharpen Open Source Java to C# Translator
+=========================================
+
+* The sharpen home page is http://community.versant.com/Documentation/Reference/db4o-7.12/java/reference/Content/sharpen.htm
+* The sharpen source code is available at https://source.db4o.com/db4o/trunk/sharpen/
+* `sharpen.core-1.0.0.jar` was copied from https://github.com/mono/ngit/blob/master/gen/plugins/sharpen.core_1.0.0.jar
+
+
+Copyright (C) 2004 - 2008  Versant Inc.  http://www.db4o.com
+
+sharpen is free software; you can redistribute it and/or modify it under
+the terms of version 2 of the GNU General Public License as published
+by the Free Software Foundation and as clarified by db4objects' GPL 
+interpretation policy, available at
+http://www.db4o.com/about/company/legalpolicies/gplinterpretation/
+Alternatively you can write to db4objects, Inc., 1900 S Norfolk Street,
+Suite 350, San Mateo, CA 94403, USA.
+
+sharpen is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, see https://www.gnu.org/licenses/

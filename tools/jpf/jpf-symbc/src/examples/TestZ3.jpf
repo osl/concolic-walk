@@ -1,0 +1,10 @@
+target=TestZ3
+classpath=${jpf-symbc}/build/examples
+sourcepath=${jpf-symbc}/src/examples
+symbolic.method = TestZ3.test(sym#sym)
+symbolic.min_int=-100
+symbolic.max_int=100
+symbolic.dp=z3
+#vm.storage.class=nil
+#listener = .symbc.SymbolicListener
+#listener = .listener.ChoiceTracker

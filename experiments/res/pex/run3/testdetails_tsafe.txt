@@ -1,0 +1,198 @@
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = Conflict.Snippet(0, 0, 0, 0, 0, 0, 0);
+Assert.AreEqual<double>(2, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(Conflict))]
+public void Snippet86501()
+{
+    double d;
+    d = Conflict.Snippet(0, 0, 0, 0, 0, 0, 0);
+    Assert.AreEqual<double>(2, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = Conflict.Snippet(-57.295779513082323, 0, 0, 0, 0, 0, 0);
+Assert.AreEqual<double>(2, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(Conflict))]
+public void Snippet60901()
+{
+    double d;
+    d = Conflict.Snippet(-57.295779513082323, 0, 0, 0, 0, 0, 0);
+    Assert.AreEqual<double>(2, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = Conflict.Snippet(-57.295779513082323, -1, -1, 
+                     -0.21797010530138264, 0.5, 9.88131291682493E-324, 3.1415926535897931);
+Assert.AreEqual<double>(0.54534790119047727, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(Conflict))]
+public void Snippet37501()
+{
+    double d;
+    d = Conflict.Snippet(-57.295779513082323, -1, -1, 
+                         -0.21797010530138264, 0.5, 9.88131291682493E-324, 3.1415926535897931);
+    Assert.AreEqual<double>(0.54534790119047727, d);
+}
+
+
+ 
+ 
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet
+        (-6.8509778634287714E-19, 6.2831853071795862, 0, 2.7182818284590451, 
+         double.Epsilon, 3.9587442823133948E-111, 9.88131291682493E-324, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet99801()
+{
+    double d;
+    d = TurnLogic.Snippet
+            (-6.8509778634287714E-19, 6.2831853071795862, 0, 2.7182818284590451, 
+             double.Epsilon, 3.9587442823133948E-111, 9.88131291682493E-324, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet(0, 0, 0, 0, 0, 0, 0, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet75701()
+{
+    double d;
+    d = TurnLogic.Snippet(0, 0, 0, 0, 0, 0, 0, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet
+        (double.NegativeInfinity, 0.78697953484209116, 0, 1.922319496897732E-75, 
+         0, 6.2831853071795862, -1, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet45501()
+{
+    double d;
+    d = TurnLogic.Snippet
+            (double.NegativeInfinity, 0.78697953484209116, 0, 1.922319496897732E-75, 
+             0, 6.2831853071795862, -1, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet
+        (7.03765392004285E-79, 4.5851480332810675E+18, 0, 3.7095754762467063E-07, 
+         -3.6193099224887946, double.PositiveInfinity, 3.1415926535897931, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet44201()
+{
+    double d;
+    d = TurnLogic.Snippet
+            (7.03765392004285E-79, 4.5851480332810675E+18, 0, 3.7095754762467063E-07, 
+             -3.6193099224887946, double.PositiveInfinity, 3.1415926535897931, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet(0, -1, 0, 0, 1, 0, 0, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet30101()
+{
+    double d;
+    d = TurnLogic.Snippet(0, -1, 0, 0, 1, 0, 0, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+double d;
+d = TurnLogic.Snippet(0, 2.7182818284590451, 0, 0, 0.5, 0, 0.5, 0);
+Assert.AreEqual<double>(0, d);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TurnLogic))]
+public void Snippet02()
+{
+    double d;
+    d = TurnLogic.Snippet(0, 2.7182818284590451, 0, 0, 0.5, 0, 0.5, 0);
+    Assert.AreEqual<double>(0, d);
+}
+
+
+ 
+ 

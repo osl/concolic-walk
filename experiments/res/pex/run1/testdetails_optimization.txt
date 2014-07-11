@@ -1,0 +1,247 @@
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Wood(0, -0.1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Wood86701()
+{
+    global::Optimization.Wood(0, -0.1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Wood(1, 1, 0, 0.10540925533894598);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Wood83201()
+{
+    global::Optimization.Wood(1, 1, 0, 0.10540925533894598);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Wood(1, 1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Wood74601()
+{
+    global::Optimization.Wood(1, 1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Wood(1, 1, 1, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Wood34701()
+{
+    global::Optimization.Wood(1, 1, 1, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Wood(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Wood23701()
+{
+    global::Optimization.Wood(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Rosenbrock(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Rosenbrock53201()
+{
+    global::Optimization.Rosenbrock(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Powell(5.5039569285128163E-19, 181687468304771.53);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Powell62201()
+{
+    global::Optimization.Powell(5.5039569285128163E-19, 181687468304771.53);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Powell(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Powell53201()
+{
+    global::Optimization.Powell(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.HelicalValley(-1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void HelicalValley96401()
+{
+    global::Optimization.HelicalValley(-1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.HelicalValley(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void HelicalValley95901()
+{
+    global::Optimization.HelicalValley(0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.HelicalValley(0, 0, -0.1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void HelicalValley58101()
+{
+    global::Optimization.HelicalValley(0, 0, -0.1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.HelicalValley(1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void HelicalValley55801()
+{
+    global::Optimization.HelicalValley(1, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.FreudensteinRoth(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void FreudensteinRoth53201()
+{
+    global::Optimization.FreudensteinRoth(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Beale(1.5, -5.0945542005592932E-233);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Beale85201()
+{
+    global::Optimization.Beale(1.5, -5.0945542005592932E-233);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Optimization.Beale(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Optimization))]
+public void Beale53201()
+{
+    global::Optimization.Beale(0, 0);
+}
+
+
+ 
+ 

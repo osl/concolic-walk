@@ -1,0 +1,2 @@
+@include common-optimization.properties
+target = JpfTargetPowell

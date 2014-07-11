@@ -1,0 +1,66 @@
+# Derived from the output of `javap JPFBenchmark.class`
+coral.tests.JPFBenchmark.benchmark01(double, double):1000
+coral.tests.JPFBenchmark.benchmark02(double, double):1000
+coral.tests.JPFBenchmark.benchmark03(double, double):1000
+coral.tests.JPFBenchmark.benchmark04(double):1000
+coral.tests.JPFBenchmark.benchmark05(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark06(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark07(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark08(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark09(double, double):1000
+coral.tests.JPFBenchmark.benchmark10(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark11(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark12(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark13(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark14(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark15(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark16(double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark17(double):1000
+coral.tests.JPFBenchmark.benchmark18(double):1000
+coral.tests.JPFBenchmark.benchmark19(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark20(double, double):1000
+coral.tests.JPFBenchmark.benchmark21(double, double):1000
+coral.tests.JPFBenchmark.benchmark22(double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark23(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark25(double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark26(double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark27(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark29(double):1000
+coral.tests.JPFBenchmark.benchmark32(double):1000
+coral.tests.JPFBenchmark.benchmark33(double):1000
+coral.tests.JPFBenchmark.benchmark34(double):1000
+coral.tests.JPFBenchmark.benchmark35(double, double):1000
+coral.tests.JPFBenchmark.benchmark38(double, double):1000
+coral.tests.JPFBenchmark.benchmark39(double, double):1000
+coral.tests.JPFBenchmark.benchmark40(double, double):1000
+coral.tests.JPFBenchmark.benchmark41(double, double):1000
+coral.tests.JPFBenchmark.benchmark42(double, double):1000
+coral.tests.JPFBenchmark.benchmark43(double, double):1000
+coral.tests.JPFBenchmark.benchmark44(double, double):1000
+coral.tests.JPFBenchmark.benchmark45(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark46(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark47(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark48(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark49(double, double):1000
+coral.tests.JPFBenchmark.benchmark50(double, double):1000
+coral.tests.JPFBenchmark.benchmark52(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark53(double, double, double):1000
+coral.tests.JPFBenchmark.benchmark56(double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark61(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark62(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark70(double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark71(double, double, double, double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark72(double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark73(double, double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark74(double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark75(double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark76(double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark77(double, double, double, double, double, double, double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark78(double, double, double, double, double, int, int, int):1000
+coral.tests.JPFBenchmark.benchmark79(double, double, double, double, int):1000
+coral.tests.JPFBenchmark.benchmark80(double, double):1000
+coral.tests.JPFBenchmark.benchmark81(double, double):1000
+coral.tests.JPFBenchmark.benchmark82(double, double):1000
+coral.tests.JPFBenchmark.benchmark83(double, double):1000
+coral.tests.JPFBenchmark.benchmark84(double, double, double, double):1000
+coral.tests.JPFBenchmark.benchmark91(double, double):1000

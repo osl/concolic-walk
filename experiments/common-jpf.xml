@@ -1,0 +1,128 @@
+<project xmlns:jacoco="antlib:org.jacoco.ant">
+
+  <basename property="program" file="${basedir}" />
+  <property name="ant.project.name" value="${program} driver" />
+  <import file="common-logging.xml" />
+
+  <basename property="jpf.variant" file="${basedir}/../" />
+  <import file="${experiments.dir}/arguments-${jpf.variant}.xml" />
+
+  <!--
+      Must set build.programs.dir, build.drivers.dir,
+      build.tests.dir, gen.dir
+  -->
+  <path id="classpath.jacoco" />
+  <property name="srcdir" location="${basedir}" />
+  <property name="classdir.program" value="${build.programs.dir}/${program}" />
+  <property name="classdir.drivers" value="${build.drivers.dir}/${jpf.variant}/${program}" />
+  <property name="classdir.tests" value="${build.tests.dir}/${jpf.variant}/${program}" />
+  <property name="gendir.tests" value="${gen.dir}/${jpf.variant}/${program}" />
+
+  <!-- Import program-specific class path from program's build.xml -->
+  <path id="classpath.program" />
+  <import file="${src.programs.dir}/${program}/build.xml" />
+
+  <path id="classpath.drivers">
+    <pathelement path="${classdir.program}" />
+    <pathelement path="${classdir.drivers}" />
+    <path refid="classpath.program" />
+    <pathelement path="${tool.jpf-core.dir}/build/classes" />
+    <pathelement path="${tool.jpf-symbc.dir}/build/classes" />
+  </path>
+
+  <path id="classpath.tests">
+    <pathelement path="${classdir.program}" />
+    <pathelement path="${classdir.drivers}" />
+    <pathelement path="${classdir.tests}" />
+    <path refid="classpath.program" />
+    <path refid="classpath.junit4" />
+    <pathelement path="${tool.jpf-core.dir}/build/classes" />
+    <pathelement path="${tool.jpf-symbc.dir}/build/classes" />
+  </path>
+
+  <target name="compile-drivers">
+    <echo>>>> Compiling JPF[${jpf.variant}] drivers for ${program}</echo>
+    <mkdir dir="${classdir.drivers}" />
+    <javac srcdir="${srcdir}"
+	   destdir="${classdir.drivers}"
+	   classpathref="classpath.drivers"
+	   debug="true"
+	   includeAntRuntime="false">
+    </javac>
+  </target>
+
+  <target name="generate-tests">
+    <echo-begin-generate tool="${jpf.variant}" program="${program}" />
+    <echo>>>> Generating JPF[${jpf.variant}] tests for ${program}</echo>
+    <mkdir dir="${gendir.tests}" />
+
+    <tstamp prefix="jpf">
+      <format property="SEED" pattern="1HmssS" />
+    </tstamp>
+
+    <!-- Run JPF -->
+    <apply executable="java"
+	   parallel="false"
+	   addsourcefile="true"
+	   relative="true">
+      <arg value="-Xmx2G" />
+      <arg value="-Xss8M" />
+      <arg value="-jar" />
+      <arg value="${tool.jpf-core.dir}/build/RunJPF.jar" />
+      <arg line="${jpf.arguments}" />
+      <!-- This is an ugly hack and should move to arguments-jpf-coral.xml eventually -->
+      <arg line="+coral.seed=${jpf.SEED}" />
+      <arg value="+classpath=${toString:classpath.drivers}" />
+      <fileset dir="${srcdir}" includes="*.jpf" />
+      <redirector>
+	<!-- Redirect STDOUT to the test source file -->
+	<outputmapper type="glob"
+		      from="*.jpf"
+		      to="${gendir.tests}/*Test.java.log" />
+      </redirector>
+    </apply>
+    <echo-end-generate tool="${jpf.variant}" program="${program}" />
+
+    <!-- Extract the test class from JPF's output -->
+    <apply executable="bash"
+	   parallel="false"
+	   dir="${gendir.tests}"
+	   addsourcefile="true"
+	   relative="true">
+      <arg file="../filter-jpf-tests.sh" />
+      <fileset dir="${gendir.tests}" includes="*Test.java.log" />
+    </apply>
+  </target>
+
+  <target name="compile-tests">
+    <echo>>>> Compiling JPF[${jpf.variant}] tests for ${program}</echo>
+    <mkdir dir="${classdir.tests}" />
+    <javac srcdir="${srcdir}"
+	   destdir="${classdir.tests}"
+	   classpathref="classpath.tests"
+	   debug="true"
+	   includeAntRuntime="false">
+    </javac>
+  </target>
+
+  <target name="run-tests">
+    <echo>>>> Collecting coverage of JPF[${jpf.variant}] tests for ${program}</echo>
+    <jacoco:agent property="agent.vmparam"
+		  destfile="jacoco.exec"
+		  append="false" />
+    <apply executable="java"
+	   dir="${classdir.tests}"
+	   parallel="true"
+	   addsourcefile="false"
+	   relative="true">
+      <arg value="${agent.vmparam}" />
+      <arg value="-classpath" />
+      <arg value="${toString:classpath.tests}" />
+      <arg value="org.junit.runner.JUnitCore" />
+      <targetfile />
+      <fileset dir="${classdir.tests}" includes="*.class" />
+      <mapper type="package" from="*.class" to="*" />
+      <redirector output="run_tests.log" append="false" />
+    </apply>
+  </target>
+</project>

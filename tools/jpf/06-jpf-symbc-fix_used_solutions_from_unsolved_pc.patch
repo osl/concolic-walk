@@ -1,0 +1,14 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+index 2ca64fa..f8763d0 100644
+--- a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
++++ b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+@@ -301,6 +301,9 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 							else
+ 								pc.solve();
+ 
++							if (!PathCondition.flagSolved) {
++							  return;
++							}
+ 
+ 							//after the following statement is executed, the pc loses its solution
+ 

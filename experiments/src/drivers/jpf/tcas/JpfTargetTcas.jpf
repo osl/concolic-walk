@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetTcas
+symbolic.method = Tcas.start_symbolic(sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym)

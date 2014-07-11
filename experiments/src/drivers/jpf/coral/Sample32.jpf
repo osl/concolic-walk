@@ -1,0 +1,2 @@
+@include common-coral.properties
+target = coral.tests.samples.Sample32

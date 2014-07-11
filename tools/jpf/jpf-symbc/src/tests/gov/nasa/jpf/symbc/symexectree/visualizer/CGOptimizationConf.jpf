@@ -1,0 +1,21 @@
+target = gov.nasa.jpf.symbc.symexectree.visualizer.TestCGOptimization
+
+classpath = ${jpf-symbc}/build/tests
+
+sourcepath = ${jpf-symbc}/src/tests
+
+symbolic.method = gov.nasa.jpf.symbc.symexectree.visualizer.TestCGOptimization$TestSystem.testIF_ICMPEQ(sym#sym)
+
+#coverage.include=*.BankAccount
+#coverage.show_methods=true
+#coverage.show_bodies=true
+
+symbolic.minint=-100
+
+symbolic.maxint=100
+symbolic.undefined=-1000
+
+#search.class = .search.heuristic.BFSHeuristic
+
+#listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer
+#coverage.show_methods=true

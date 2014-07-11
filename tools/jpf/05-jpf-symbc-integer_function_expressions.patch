@@ -1,0 +1,389 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/concolic/ConcreteExecutionListener.java b/src/main/gov/nasa/jpf/symbc/concolic/ConcreteExecutionListener.java
+index cc00d69..3e2b367 100644
+--- a/src/main/gov/nasa/jpf/symbc/concolic/ConcreteExecutionListener.java
++++ b/src/main/gov/nasa/jpf/symbc/concolic/ConcreteExecutionListener.java
+@@ -52,9 +52,13 @@ public class ConcreteExecutionListener extends PropertyListenerAdapter {
+ 			if(foundAnote) {
+ 				ThreadInfo ti = vm.getCurrentThread();
+ 				StackFrame sf = ti.popAndGetModifiableTopFrame();
+-				FunctionExpression result =
+-					generateFunctionExpression(mi, (InvokeInstruction)
+-													lastInsn, ti);
++				Object result;
++				String returnType = mi.getReturnType();
++				if (returnType.equals("D") || returnType.equals("F")) {
++					result = generateFunctionExpression(mi,	(InvokeInstruction) lastInsn, ti);
++				} else {
++					result = generateIntegerFunctionExpression(mi, (InvokeInstruction) lastInsn, ti);
++				}
+ 				checkReturnType(ti, mi, result);
+ 				Instruction nextIns = sf.getPC().getNext();
+ 			    vm.getCurrentThread().skipInstruction(nextIns);
+@@ -135,7 +139,48 @@ public class ConcreteExecutionListener extends PropertyListenerAdapter {
+ 		return result;
+ 	}
+ 
++	private IntegerFunctionExpression generateIntegerFunctionExpression(
++			MethodInfo mi, InvokeInstruction ivk, ThreadInfo ti) {
++		Object[] attrs = ivk.getArgumentAttrs(ti);
++		Object[] values = ivk.getArgumentValues(ti);
++		String[] types = mi.getArgumentTypeNames();
+ 
++		assert (attrs != null);
++
++		assert (attrs.length == values.length && values.length == types.length);
++		int size = attrs.length;
++
++		Class<?>[] args_type = new Class<?>[size];
++		Expression[] sym_args = new Expression[size];
++
++		Map<String, Expression> expressionMap = new HashMap<String, Expression>();
++		LocalVarInfo[] localVars = mi.getLocalVars();
++
++		for (int argIndex = 0; argIndex < size; argIndex++) {
++			Object attribute = attrs[argIndex];
++			if (attribute == null) {
++				sym_args[argIndex] = this.generateConstant(types[argIndex],
++						values[argIndex]);
++			} else {
++				sym_args[argIndex] = (Expression) attribute;
++				if (localVars.length > argIndex)
++					expressionMap.put(localVars[argIndex].getName(),
++							sym_args[argIndex]);
++
++			}
++			args_type[argIndex] = checkArgumentTypes(types[argIndex]);
++		}
++
++		ArrayList<PathCondition> conditions = Partition.createConditions(
++				partitions, expressionMap);
++
++		IntegerFunctionExpression result = new IntegerFunctionExpression(
++				mi.getClassName(), mi.getName(), args_type, sym_args,
++				conditions);
++
++		return result;
++	}	  
++	  
+ 	private void checkReturnType(ThreadInfo ti, MethodInfo mi, Object resultAttr) {
+ 		String retTypeName = mi.getReturnTypeName();
+ 		StackFrame sf = ti.getModifiableTopFrame();
+diff --git a/src/main/gov/nasa/jpf/symbc/concolic/FunctionExpression.java b/src/main/gov/nasa/jpf/symbc/concolic/FunctionExpression.java
+index 7eb74fb..7cdb200 100644
+--- a/src/main/gov/nasa/jpf/symbc/concolic/FunctionExpression.java
++++ b/src/main/gov/nasa/jpf/symbc/concolic/FunctionExpression.java
+@@ -61,6 +61,21 @@ public class FunctionExpression extends RealExpression
+ 		this.conditions = conditions;
+ 	}
+ 
++	public Method getMethod() throws NoSuchMethodException, SecurityException {
++		Class<?> cls = null;
++		try {
++			cls = Class.forName(class_name, true, getClsLoader());
++		} catch (ClassNotFoundException c) {
++			c.printStackTrace();
++			System.err.println("Class not found:" + class_name);
++		} catch (UnsatisfiedLinkError e) {
++			e.printStackTrace();
++			System.out.println("unsatisfied link error");
++
++		}
++		return cls.getMethod(method_name, argTypes);
++	}
++	
+ 	// here we assume that the solution is always double; if it is not we can cast it later;
+ 	public double solution()
+ 	{
+@@ -70,29 +85,6 @@ public class FunctionExpression extends RealExpression
+ 		assert(sym_args!=null && sym_args.length >0);
+ 
+ 		try {
+-			if(clsLoader == null) {
+-				ArrayList<String> list = new ArrayList<String>();
+-				String[] cp = ClassLoaderInfo.getCurrentClassLoader().getClassPathElements();
+-				cp = FileUtils.expandWildcards(cp);
+-				for (String e : cp) {
+-					list.add(e);
+-				}
+-				URL[] urls = FileUtils.getURLs(list);
+-				clsLoader = new URLClassLoader(urls);
+-			}
+-			
+-			Class<?> cls = null;
+-			try {
+-				cls = Class.forName(class_name, true, clsLoader);
+-			} catch (ClassNotFoundException c) {
+-				c.printStackTrace();
+-				System.err.println("Class not found:" + class_name);
+-			} catch (UnsatisfiedLinkError e) {
+-				e.printStackTrace();
+-				System.out.println("unsatisfied link error");
+-				
+-			}
+-			
+ 			  Object[] args = new Object[sym_args.length];
+ 		      for (int i=0; i<args.length; i++)
+ 		    	  if (sym_args[i] instanceof IntegerExpression) {
+@@ -101,7 +93,7 @@ public class FunctionExpression extends RealExpression
+ 			      else {// RealExpression
+ 			    	args[i] = new Double(((RealExpression)sym_args[i]).solution());
+ 			      }
+-		      Method m = cls.getMethod(method_name, argTypes);
++		      Method m = getMethod();
+ 		      int modifiers = m.getModifiers();
+ 		      if (Modifier.isStatic(modifiers) && Modifier.isPublic(modifiers)){
+ 		    	  Object result = null;
+@@ -194,4 +186,18 @@ public class FunctionExpression extends RealExpression
+ 		}
+ 	}
+ 
++	static ClassLoader getClsLoader() {
++		if (clsLoader == null) {
++			ArrayList<String> list = new ArrayList<String>();
++			String[] cp = ClassLoaderInfo.getCurrentClassLoader()
++					.getClassPathElements();
++			cp = FileUtils.expandWildcards(cp);
++			for (String e : cp) {
++				list.add(e);
++			}
++			URL[] urls = FileUtils.getURLs(list);
++			clsLoader = new URLClassLoader(urls);
++		}
++		return clsLoader;
++	}
+ }
+diff --git a/src/main/gov/nasa/jpf/symbc/concolic/IntegerFunctionExpression.java b/src/main/gov/nasa/jpf/symbc/concolic/IntegerFunctionExpression.java
+new file mode 100644
+index 0000000..6f9192f
+--- /dev/null
++++ b/src/main/gov/nasa/jpf/symbc/concolic/IntegerFunctionExpression.java
+@@ -0,0 +1,193 @@
++//
++//Copyright (C) 2005 United States Government as represented by the
++//Administrator of the National Aeronautics and Space Administration
++//(NASA).  All Rights Reserved.
++//
++//This software is distributed under the NASA Open Source Agreement
++//(NOSA), version 1.3.  The NOSA has been approved by the Open Source
++//Initiative.  See the file NOSA-1.3-JPF at the top of the distribution
++//directory tree for the complete NOSA document.
++//
++//THE SUBJECT SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY OF ANY
++//KIND, EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT
++//LIMITED TO, ANY WARRANTY THAT THE SUBJECT SOFTWARE WILL CONFORM TO
++//SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR
++//A PARTICULAR PURPOSE, OR FREEDOM FROM INFRINGEMENT, ANY WARRANTY THAT
++//THE SUBJECT SOFTWARE WILL BE ERROR FREE, OR ANY WARRANTY THAT
++//DOCUMENTATION, IF PROVIDED, WILL CONFORM TO THE SUBJECT SOFTWARE.
++//
++
++package gov.nasa.jpf.symbc.concolic;
++// support for arbitrary external functions
++
++import gov.nasa.jpf.symbc.numeric.ConstraintExpressionVisitor;
++import gov.nasa.jpf.symbc.numeric.Expression;
++import gov.nasa.jpf.symbc.numeric.IntegerExpression;
++import gov.nasa.jpf.symbc.numeric.PathCondition;
++import gov.nasa.jpf.symbc.numeric.RealExpression;
++import gov.nasa.jpf.util.FileUtils;
++import gov.nasa.jpf.vm.ClassLoaderInfo;
++
++import java.lang.reflect.InvocationTargetException;
++import java.lang.reflect.Method;
++import java.lang.reflect.Modifier;
++//import java.net.MalformedURLException;
++//import java.net.URI;
++import java.net.URL;
++import java.net.URLClassLoader;
++import java.util.ArrayList;
++import java.util.Map;
++
++public class IntegerFunctionExpression extends IntegerExpression {
++	String class_name;
++	String method_name;
++	Class<?>[] argTypes;
++	public Expression[] sym_args;
++	static URLClassLoader clsLoader = null;
++	ArrayList<PathCondition> conditions;
++
++	// what happens when there are no arguments?
++	public IntegerFunctionExpression(String cls, String mth, Class<?>[] ast,
++			Expression[] sym_as, ArrayList<PathCondition> conditions) {
++		class_name = cls;
++		method_name = mth;
++		assert (ast != null && sym_as != null && sym_as.length == ast.length);
++		// do we need a deep copy here or a shallow copy is enough?
++		argTypes = ast;
++		sym_args = sym_as;
++		this.conditions = conditions;
++	}
++
++	public Method getMethod() throws NoSuchMethodException, SecurityException {
++		Class<?> cls = null;
++		try {
++			cls = Class.forName(class_name, true, FunctionExpression.getClsLoader());
++		} catch (ClassNotFoundException c) {
++			c.printStackTrace();
++			System.err.println("Class not found:" + class_name);
++		} catch (UnsatisfiedLinkError e) {
++			e.printStackTrace();
++			System.out.println("unsatisfied link error");
++
++		}
++		return cls.getMethod(method_name, argTypes);
++	}
++
++	// here we assume that the solution is always double; if it is not we can
++	// cast it later;
++	@Override
++	public int solution() {
++		// here we need to use reflection to invoke the method with
++		// name method_name and with parameters the solutions of the arguments
++
++		assert (sym_args != null && sym_args.length > 0);
++
++		try {
++
++			Object[] args = new Object[sym_args.length];
++			for (int i = 0; i < args.length; i++)
++				if (sym_args[i] instanceof IntegerExpression) {
++					args[i] = new Integer(
++							((IntegerExpression) sym_args[i]).solution());
++				} else {// RealExpression
++					args[i] = new Double(
++							((RealExpression) sym_args[i]).solution());
++				}
++			Method m = getMethod();
++			int modifiers = m.getModifiers();
++			if (Modifier.isStatic(modifiers) && Modifier.isPublic(modifiers)) {
++				Object result = null;
++				try {
++					result = m.invoke(null, args); // here we need the type of
++													// the result
++				} catch (InvocationTargetException e) {
++					e.printStackTrace();
++					System.err.println("exception :" + e.getMessage());
++				}
++				if (result instanceof Double) {
++					// System.out.println("result type is double");
++					return ((Double) result).intValue();
++				}
++				if (result instanceof Integer) {
++					// System.out.println("result type is int");
++					return ((Integer) result).intValue();
++				}
++				// System.out.println("result "+result);
++			}
++		}
++
++		catch (Throwable e) {
++			System.err.println(e);
++		}
++		return 0;
++	}
++
++	@Override
++	public void getVarsVals(Map<String, Object> varsVals) {
++		if (sym_args != null)
++			for (int i = 0; i < sym_args.length; i++)
++				sym_args[i].getVarsVals(varsVals);
++	}
++
++	@Override
++	public String stringPC() {
++		String result = "";
++		if (sym_args != null)
++			for (int i = 0; i < sym_args.length; i++)
++				result = result + sym_args[i].stringPC() + " ";
++		return "(" + class_name + "." + method_name + "(" + result + ")";
++
++	}
++
++	@Override
++	public String toString() {
++		String result = "";
++		if (sym_args != null)
++			for (int i = 0; i < sym_args.length; i++)
++				result = result + sym_args[i].toString() + " ";
++		return "(" + class_name + "." + method_name + "(" + result + ")";
++	}
++	@Override
++	public void accept(ConstraintExpressionVisitor visitor) {
++		visitor.preVisit(this);
++		for (Expression arg : sym_args) {
++			arg.accept(visitor);
++		}
++		visitor.postVisit(this);
++	}
++
++	@Override
++	public int compareTo(Expression expr) {
++		if (expr instanceof IntegerFunctionExpression) {
++			IntegerFunctionExpression e = (IntegerFunctionExpression) expr;
++			int r = class_name.compareTo(e.class_name);
++			if (r == 0) {
++				r = method_name.compareTo(e.method_name);
++				if (r == 0) {
++					if (sym_args != null) {
++						if (e.sym_args == null) {
++							r = 1;
++						} else {
++							int a = sym_args.length;
++							int b = e.sym_args.length;
++							r = (a < b) ? -1 : (a > b) ? 1 : 0;
++							if (r == 0) {
++								int i = 0;
++								while ((r == 0) && (i < a)) {
++									r = sym_args[i].compareTo(e.sym_args[i]);
++									i++;
++								}
++							}
++						}
++					} else if (e.sym_args != null) {
++						r = -1;
++					}
++				}
++			}
++			return r;
++		} else {
++			return getClass().getCanonicalName().compareTo(expr.getClass().getCanonicalName());
++		}
++	}
++
++}
+diff --git a/src/main/gov/nasa/jpf/symbc/concolic/PCAnalyzer.java b/src/main/gov/nasa/jpf/symbc/concolic/PCAnalyzer.java
+index 2014905..1c4906e 100644
+--- a/src/main/gov/nasa/jpf/symbc/concolic/PCAnalyzer.java
++++ b/src/main/gov/nasa/jpf/symbc/concolic/PCAnalyzer.java
+@@ -288,6 +288,19 @@ public class PCAnalyzer {
+ 			}
+ 			return c;
+ 		}
++	    else if (eRef instanceof IntegerFunctionExpression) {
++			Expression [] sym_args = ((IntegerFunctionExpression)eRef).sym_args;
++			assert(sym_args != null && sym_args.length > 0);
++			RealExpression e = (RealExpression)sym_args[0];// for now assume only real expressions; TODO the integer expressions
++			RealConstraint c = new RealConstraint(e, Comparator.EQ, new RealConstant(e.solution()));
++			for(int i=1; i<sym_args.length; i++) {
++				RealExpression e2 = (RealExpression)sym_args[i];
++				RealConstraint c2 = new RealConstraint(e2, Comparator.EQ, new RealConstant(e2.solution()));
++				c2.and = c;
++				c = c2;
++			}
++			return c;
++		}
+ 		else if (eRef instanceof BinaryNonLinearIntegerExpression) {
+ 
+ 			IntegerExpression	e_arg1Ref;
+@@ -337,9 +350,9 @@ public class PCAnalyzer {
+ 			return new RealConstant(((RealExpression)eRef).solution());
+ 		}
+ 
+-		if(eRef instanceof BinaryNonLinearIntegerExpression) {
++		if(eRef instanceof BinaryNonLinearIntegerExpression || eRef instanceof IntegerFunctionExpression) {
+ 			extraPC.prependUnlessRepeated(eqConcolicConstraint(eRef));
+-			return new IntegerConstant(((BinaryNonLinearIntegerExpression)eRef).solution());
++			return new IntegerConstant(((IntegerExpression)eRef).solution());
+ 		}
+ 
+ 		throw new RuntimeException("## Error: Expression " + eRef);

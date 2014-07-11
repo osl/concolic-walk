@@ -1,0 +1,5 @@
+TestDrivers.vector3DNormalize(float,float,float):10000
+TestDrivers.surfaceShade(float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,int,float,float,float,float,float,float):10000
+TestDrivers.rayTrace(float,float,float,float,float,float,float,float,float,float):10000
+TestDrivers.sphereIntersect(float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float):10000
+TestDrivers.sphereShade(float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,int,float,float,float,float,float,float,float,float,float):10000

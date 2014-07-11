@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=a784f362dca6a65f72de7ee1b589912d"></script>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lte-ie8"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7 lte-ie8"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8 lte-ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>	
+    <meta name="google-site-verification" content="uUdqcWSCr6btUD-jkJCiGZ5KJhKIagGHH7XuWdjiW9A" />
+	<title>PaulDB.getWords() &bull; A guide to Sharpen - a great tool for converting Java to C#</title>
+	
+	<meta name="description" content="A guide to Sharpen - a great tool for converting Java to C# Following on from my tips on porting Java to C#, I&rsquo;ve put together a step by step guide to getting Sharpen working. This is primarily..."/>
+	
+	<!--
+
+	===================================================
+	
+	Effector Theme v1.2.6
+	by Carlo Franco
+	
+	Questions or comments? 
+	visit: http://effectortheme.tumblr.com/documentation
+	email: effector@carlofranco.ca
+	follow: @effectortheme on Twitter for updates!
+	
+	=================================================== 
+
+	-->
+	<meta name="color:Background" content="#e6ebea"/>
+	<meta name="color:Colored Area Text" content="#fffadc"/>
+	<meta name="color:Colored Area Text Shadow" content="#bf4402"/>
+	<meta name="color:Inside Link" content="#f55b2c"/>	
+	<meta name="color:Main Theme" content="#f55b2c"/>
+	<meta name="color:Outside Link" content="#f55b2c"/>
+	<meta name="color:Outside Link Hover" content="#131313"/>
+	<meta name="color:Outside Text" content="#616566"/>
+	<meta name="font:Inside Heading" content="Helvetica Neue, Arial, sans-serif"/>
+	<meta name="font:Inside Text" content="Georgia, serif"/>
+	<meta name="font:Outside Heading" content="Helvetica Neue, Arial, sans-serif"/>	
+	<meta name="font:Outside Text" content="Helvetica Neue, Arial, sans-serif"/>
+	<meta name="image:Background" content=""/>
+	<meta name="image:Banner" content=""/>
+	<meta name="image:Large Sidebar Portrait" content=""/>
+	<meta name="image:Logo" content=""/>	
+	<meta name="if:Align Top Menu Left" content="0"/>
+	<meta name="if:Automatic Headings" content="0"/>
+	<meta name="if:Blog Title in Page Header" content="0"/>
+	<meta name="if:Blog Title in Sidebar" content="0"/>
+	<meta name="if:Blog Title in Top bar" content="1"/>
+	<meta name="if:Centered Layout" content="1"/>
+	<meta name="if:Collapse Notes" content="1"/>
+	<meta name="if:Content Width 500" content="0"/>
+	<meta name="if:Content Width 600" content="0"/>
+	<meta name="if:Content Width 700" content="1"/>
+	<meta name="if:Fixed Background" content="0"/>	
+	<meta name="if:Fixed Top Bar" content="1"/>
+	<meta name="if:Infinite Scrolling" content="0"/>
+	<meta name="if:Invert" content="0"/>
+	<meta name="if:Invert Top Bar" content="0"/>
+	<meta name="if:Large Social Icons" content="1"/>
+	<meta name="if:Left Sidebar" content="0"/>
+	<meta name="if:Logo in Top bar" content="0"/>	
+	<meta name="if:Original Photosets" content="0"/>
+	<meta name="if:Pages In Top Bar" content="0"/>
+	<meta name="if:Rounded Post Corners" content="0"/>
+	<meta name="if:Scale Images" content="1"/>
+	<meta name="if:Search Box In Sidebar" content="0"/>
+	<meta name="if:Show About Heading" content="1"/>
+	<meta name="if:Show Blogs I Follow" content="0"/>
+	<meta name="if:Show Description" content="1"/>
+	<meta name="if:Show Likes" content="0"/>
+	<meta name="if:Show Likes in Sidebar" content="0"/>	
+	<meta name="if:Show Pages Heading" content="1"/>
+	<meta name="if:Show Portrait" content="0"/>
+	<meta name="if:Show Random Post Icon" content="0"/>
+	<meta name="if:Show Social Icons Widget" content="0"/>
+	<meta name="if:Show Tweets" content="1"/>
+	<meta name="if:Show Twitter Profile" content="1"/>
+	<meta name="if:Top Menu With Labels" content="0"/>
+	<meta name="text:Behance Username" content=""/>
+	<meta name="text:Cargo URL" content=""/>
+	<meta name="text:Copyright Text" content=""/>
+	<meta name="text:Default Search Text" content="Search"/>	
+	<meta name="text:Delicious Username" content=""/>
+	<meta name="text:Digg Username" content=""/>
+	<meta name="text:Disqus Shortname" content=""/>
+	<meta name="text:Dribbble Username" content=""/>	
+	<meta name="text:FFFFound Username" content=""/>
+	<meta name="text:Facebook Username" content=""/>
+	<meta name="text:Flickr Username" content=""/>
+	<meta name="text:Forrst Username" content=""/>
+	<meta name="text:Foursquare Username" content=""/>	
+	<meta name="text:GetClicky Site ID" content=""/>
+	<meta name="text:Google Analytics Web Property ID" content=""/>
+	<meta name="text:Google URL" content=""/>
+	<meta name="text:Gowalla Username" content=""/>
+	<meta name="text:Grooveshark Username" content=""/>
+	<meta name="text:Lastfm Username" content=""/>
+	<meta name="text:Liked Posts Heading" content="I Dig These Posts"/>	
+	<meta name="text:Linkedin Profile URL" content=""/>
+	<meta name="text:Myspace Friend ID" content=""/>
+	<meta name="text:Num Tweets Max 4" content="4"/>
+	<meta name="text:Pinboard Username" content=""/>
+	<meta name="text:Rdio Username" content=""/>
+	<meta name="text:Rows of Followed Avatars" content="3"/>
+	<meta name="text:Skype Username" content=""/>
+	<meta name="text:Social Icons Heading" content="Me, Elsewhere"/>
+	<meta name="text:Soundcloud Username" content=""/>
+	<meta name="text:Tagline" content=""/>
+	<meta name="text:Twitter Heading" content="Twitter"/>
+	<meta name="text:Twitter Username" content=""/>
+	<meta name="text:Vimeo Username" content=""/>
+	<meta name="text:Xbox Live Profile URL" content=""/>
+	<meta name="text:Youtube Username" content=""/>
+	<meta name="text:github Username" content=""/>
+	
+	<link rel="shortcut icon" href="http://24.media.tumblr.com/avatar_ea54e3f8613b_128.png" />
+	<link rel="apple-touch-icon" href="http://24.media.tumblr.com/avatar_ea54e3f8613b_128.png" />
+	<link rel="alternate" type="application/rss+xml" href="http://pauldb.tumblr.com/rss"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/szhlc012n/reset.css" media="screen"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/njty47g/5fRlpc2mc/site.css" media="screen"/>
+	<link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/MF5lbpkr4/jquery.fancybox-1.3.1.css" media="screen"/>	 
+	
+	
+	<script type="text/javascript">tumblrUsername = 'pauldb'; searchValue = "Search"; themeColor = "#f55b2c"; contentWidth = 700; collapseNotes = true; disqusEnabled = true; disqusShortname = "pauldb"; twitterUsername = "pauldbau"; fixedBar = true; showTweets = true; numTweets = parseInt(4); isPermalink = true; photosets = {};</script>
+	<style type="text/css">
+		 body { font-family:Helvetica Neue, Arial, sans-serif; color:#414344; background-color:#e6e6e6; }
+		.blog-title, #sidebar h1, #sidebar h2, #sidebar h3, #footer h1, #footer h2, #footer h3  { font-family:Helvetica Neue, Arial, sans-serif; }
+		.copy { font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+		.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6, .auto-headings .copy p:first-child strong:first-child, #notes h2, #disqus h2, .speaker {font-family:Helvetica Neue, Arial, sans-serif;}
+		
+		.colored-panel, .type-answer .user-question, .pages a:hover, .invert .fixed .pages a:hover, .invert .pinned .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .invert-topbar .fixed .pages a:hover, .like_link a:hover, .type-photoset .navi a:hover, #pagination .nextprev a:hover { background-color:#f55b2c; }
+		.corners .tl { border-left-color:#f55b2c; }
+		.corners .tr { border-right-color:#f55b2c; }
+		.corners .bl, .corners .br { border-bottom-color:#f55b2c; }
+		a, #footer-end a:hover { color:#f55b2c; }
+		a:hover { color:#131313; }
+		.copy a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #disqus a { color:#f55b2c; }
+		.copy a:hover, ol.notes a:hover { border-color:#f55b2c; }
+		#notes-toggle:hover .icon, .photo-btns a:hover { background-color:#f55b2c; }
+		.colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { color:#fffadc; }
+		.type-quote .quote-text,.type-audio .audio-meta,.type-answer .user-question,.pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { text-shadow:1px 1px #bf4402; }
+		ol.notes li.tumblelog_pauldb { background-color:#fbfbfb; }
+		ol.notes li.tumblelog_pauldb .action { font-weight:bold; }
+		#page, .inner { margin:0 auto; } 
+		#header .blog-title {
+font-size: 30px;
+}
+	</style>
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="" /><meta property="og:title" content="A guide to Sharpen - a great tool for converting Java to C#" /><meta property="og:url" content="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java" /><meta property="og:description" content="Following on from my tips on porting Java to C#, I&rsquo;ve put together a step by step guide to getting Sharpen working.
+This is primarily because the Sharpen documentation is minimal, confusing and..." /><meta property="og:determiner" content="a" /><meta property="og:type" content="tumblr-feed:entry" /><meta property="og:image" content="http://assets.tumblr.com/images/og/text_200.png" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="Following on from my tips on porting Java to C#, I&amp;#8217;ve put together a step by step guide to getting Sharpen working. This is primarily because the Sharpen documentation is minimal, confusing and difficult to follow if you are not a regular Eclipse and Ant user. &nbsp;The few tutorials&nbsp;I could find were also confusing.
+ 
+
+Sharpen does an excellent job of converting Java to C# while also accomodating common syntax and library differences between the languages. &nbsp; This can be a massive time saver when you are faced with a Java library that contains 1000s of lines of code.
+
+Before we dive into the details, let me make it clear that I see Sharpen as a way to kickstart the porting process, not as a one stop porting solution. &nbsp;You should expect to get your hands dirty fixing up the C# that Sharpen produces.&nbsp;
+ 
+
+OK, with my disclaimers out the way, lets get into the guide. &nbsp; My focus is on getting started with the GUI tools, though Sharpen can also be setup as a command line facility.
+ 
+
+Prerequisites
+
+ Eclipse. &nbsp;All you need is the&nbsp;Java Developers version.&nbsp; Download &amp;amp; install. Sharpen is an Eclipse plug-in so naturally you gonna need Eclipse here.&nbsp;
+
+ Sharpen. Don&rsquo;t use the official Sharpen source code since it hasn&amp;#8217;t been maintained. Download Lluis Sanchez&rsquo;s already compiled sharpen.core jar&nbsp;found in the ngit project on github. That&amp;#8217;s all your need for Sharpen. Lluis&rsquo;s version has several bugfixes and is better maintained since the MonoDevelop team use Sharpen to keep their nGit port of JGit in sync.&nbsp; 
+ Sharpen config files. The actual Sharpen conversion process runs via an Ant build script and uses properties files to configure the environment. &nbsp; Understanding how these work from the reference documentation was a pain. To make things simpler, I consolidated the configs a bit, merged in configs from Lluis&amp;#8217;s nGit project and stripped out unused bits. Download my config files&nbsp;zip and extract for later use below.&nbsp;&nbsp; 
+ Sharpen C# utility classes. Sharpen preserves many Java method signatures with a set of special utility classes. &nbsp;This avoids issues where C# does not match Java for common methods such as Substring(). &nbsp;Lluis has extended the Sharpen base utility set with more classes, so naturally we want to sponge off that too. Download all the classes found in the Sharpen folder of the NGit project.
+ &amp;lt;aside&amp;gt;Eclipse for Visual Studio people
+ If you come from an exclusively Visual Studio world then Eclipse can be a bit of a weird experience. &nbsp; I&amp;#8217;m not going to explain Eclipse here, but to help you get your head around it:
+ Eclipse Workspace = Visual Studio solution
+ Eclipse Project = VS project
+ Eclipse Build Path = VS project references
+ Java JARs = .Net DLLs
+ Eclipse Perspectives = Different UI configuration - kinda like how you can set up VS as being optimised for C# development or VB development or Web development
+ Open the Java library in Eclipse
+ Check if the Java library came with an&nbsp;existing&nbsp;Eclipse .project file - it should be in the root folder of the source. &nbsp; If you have a .project file then do the following:
+ Start up Eclipse
+ If Eclipse asks you for a workspace location, choose the default. &nbsp;
+ If you have a &amp;#8220;Welcome&amp;#8221; screen, close it to reveal the Java perspective.
+ Go to File -&amp;gt; Import. &nbsp;
+ Choose the General -&amp;gt; Existing Projects into Workspace option. Hit Next.
+ Choose Select root directory and browse to the root of the Java library source.
+ Eclipse should pick up at least one project in the Projects listing panel
+ Make sure all projects listed are ticked and click Finish.
+ If there isn&amp;#8217;t a .project file then you need to create a new Eclipse project for the source:
+ Go to File -&amp;gt; New -&amp;gt; Project
+ Choose Java -&amp;gt; Java Project and hit Next
+ Enter a project name
+ Uncheck the &amp;#8220;Use default location&amp;#8221; option and in the Location field, browse to the root folder of the Java library. &nbsp;Hit Next
+ In the Java Settings screen, you should see the various library folders picked up in the Source tab.
+ Check your Java library folder for any external jar files. &nbsp;These are normally in a &amp;#8220;lib&amp;#8221; folder in the root directory of the library. &nbsp;If you find any, then you need to make sure these are listed in the Libraries tab. &nbsp;If not, add these via the Libraries tab, using the Add External JARs option. 
+ Click Finish to create the project
+ Eclipse will automatically compile the projects, much like VS does and will report any errors. &nbsp;If you get errors then you need to fix them. &nbsp;Google is your friend :)
+ Make sure your Java library compiles. &nbsp;It must compile for Sharpen to work with it.
+ Add Sharpen as an Eclipse plugin
+ There&amp;#8217;s some stuff on the Sharpen documentation about how to build the Sharpen plugin from the source code, however thanks to the sharpen jar file we downloaded from Lluis&amp;#8217;s github, we can skip that part.
+ Simply copy the sharpen jar file to the &amp;#8220;plugins&amp;#8221; folder found in the root of your Eclipse installation. &nbsp;Sharpen will now be picked up by Eclipse as a plug-in :)
+ Add the Sharpen config and build files to your Java project
+ Grab my config files from where ever you extracted them and add them into the root of your Java library project. &nbsp;You do this by copying the files into the project folder found in your Eclipse workspace directory.
+ They must be in the root of your Java project!&nbsp;
+ Then edit the files as follows:
+ sharpen.properties
+ Set dir.workspace to be the path to your Eclipse workspace root. &nbsp; Use Unix slashes (/) for directories.
+ Set file.jvm.jdk1.5 to point at the java.exe found in your JDK installation. If you don&amp;#8217;t have a JDK installed, get it&nbsp;and install now.
+ Set eclipse.home to be the path to your Eclipse installation root.
+ Ensure eclipse.startup.jar is set to the available eclipse.equinox.launcher jar found in the plugins subfolder of your Eclipse root. This can be a big gotcha. It took me&nbsp;a while&nbsp;to figure out that my version of Eclipse had a newer launcher jar (version 1.2). So make double sure that this setting matches the file name of your launcher jar exactly.
+ run-sharpen.xml
+ This is the Ant build definition. &nbsp;Look for my CHECK THIS SETTING comments.
+ Ensure the dir attribute of the &amp;lt;target&amp;gt;&amp;lt;copy&amp;gt;&amp;lt;fileset&amp;gt; element is set to the subfolder of your Java library containing the Java source files to convert. This is usually the &amp;#8220;src&amp;#8221; folder, but if there are unit tests included in say a &amp;#8220;test&amp;#8221; folder then you will need to run Sharpen once with dir = src and once with dir = &nbsp;test to convert all Java code.
+ Ensure that all external JAR files your Java project references are listed as &amp;lt;arg&amp;gt; value and path pairs. &nbsp;See the examples I&amp;#8217;ve included in the file (don&amp;#8217;t forget to remove these too!). &nbsp; To get a list of your project&amp;#8217;s external JAR references, right click the project in Package Explorer, go to Build Path -&amp;gt; Configure Build Path and check the Libraries tab. Sharpen will build your Java project before conversion - this is why it needs to know about all the&nbsp;external&nbsp;reference JARs.&nbsp;
+ sharpen-all-options
+ This file allows you to customise how Sharpen converts the Java code. &nbsp;The Sharpen documentation outlines these options pretty well. &nbsp; The options file I included is based on Lluis&amp;#8217;s one, but edit as you wish. &nbsp; One change you should make is to change your Java library&amp;#8217;s base namespace to a C# style one in all the generated cs files. To do this, edit the sample line &amp;#8220;-namespaceMapping org.mylibrary NMyLibrary&amp;#8221; as needed.
+ header.txt
+ The text in this file will be automatically added to the top of every converted CS file. &nbsp;Edit this as needed. &nbsp;Preferably remove my idiot message. &nbsp; Make sure that you honour the license statements and conditions of the Java library - porting it to .Net does not&nbsp;exempt&nbsp;you from licenses!
+ Whew. &nbsp;OK so tons of config and setup stuff done. &nbsp;
+ You are now ready to convert your Java code!
+ Run Sharpen
+ Right click on the run-sharpen.xml file in the Package Explorer and go to Run As -&amp;gt; Ant Build.
+ You should see a Console pane come up and Ant will start running. &nbsp; You want to see a BUILD SUCCESSFUL message at the end.&nbsp;
+ The converted C# files will be output to the sharpen/sharpened.net subfolder of your Java project&amp;#8217;s root folder. &nbsp; Open Windows Explorer and navigate there to&nbsp;delight in seeing many .cs files&nbsp;:)
+ Add the Sharpen utility classes to your C# project
+ So now that you have converted a zillion lines of Java to C# in 20 seconds with Sharpen, you naturally will want to add the converted source to your .Net project.
+ When you&nbsp;do, expect to&nbsp;see a stack of compilation errors related to missing Sharpen classes.&nbsp;&nbsp; This is because the Sharpen-generated C# code uses a number of utility classes to bridge the gap between Java and C# method signatures.
+ This is easy to sort out. &nbsp;Add the Sharpen folder that you downloaded in the Prerequisites section to your project in Visual Studio. &nbsp;Make sure to include all the cs files found in that Sharpen folder.
+ Now the hard work begins&amp;#8230;
+ At this stage, everything should be sweet as far as the Sharpen part goes. &nbsp; Just don&amp;#8217;t expect the C# code to compile :)
+ Remember Sharpen converts the code as best as it can, but you still need to put in the elbow grease to get your port completed and compiling.
+ The good news is you now have a great starting point of generated C# to work with.&nbsp;" /><meta name="twitter:title" content="A guide to Sharpen - a great tool for converting Java to C#" /><meta name="twitter:url" content="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java" /><meta name="twitter:site" content="tumblr" /><meta name="twitter:creator" content="pauldbau" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=pauldb&amp;postID=14916717048&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=pauldb&amp;postID=14916717048&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=pauldb&amp;postID=14916717048&amp;referrer=twitter-cards" />
+
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=58a6e23ce2c821dc238581fb89959942"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/>
+<meta name="keywords" content="eclipse,java,csharp,sharpen" />
+</head>
+<body class="content-700 menu-labels round-corners lg-icons auto-headings scale-images singular">
+	<div id="header" class="pinned">
+		<div class="inner">
+			
+				
+			
+			
+			
+			<h1 class="blog-title"><a href="/">PaulDB.getWords()</a></h1>
+			
+			
+			
+			
+			<ul class="pages">
+				
+				<li><a href="/about">About</a></li>
+				
+			</ul>
+			
+			
+			
+			
+			<div id="search">
+				<form id="search-form" method="get" action="/search">
+					<span class="left"></span>
+					<input type="text" name="q" value="Search" />
+					<span class="right"></span>
+				</form>
+			</div>
+			
+			<ul class="menu">
+ 				
+				<li><a class="archives" href="/archive"><span class="icon"></span><span class="label">Archive</span></a></li>
+				<li><a class="rss" href="http://pauldb.tumblr.com/rss"><span class="icon"></span><span class="label">RSS</span></a></li>
+				<li><a class="ask" href="/ask"><span class="icon"></span><span class="label">Ask me anything</span></a></li>
+				
+			</ul>
+		</div><!-- .inner -->
+		<div class="shadow"><span></span></div>
+	</div><!-- /#header -->
+	
+	<!-- PAGE -->
+	<div id="page" class="right-sidebar">
+		
+		
+		
+		
+		<div id="content">
+		
+			<!-- BEGIN POSTS -->
+			
+				
+				<div id="post-14916717048" class="post type-text tag_sharpen tag_csharp tag_java tag_eclipse">
+					<div class="post-panel">
+						<div class="copy">
+							
+							<h2 class="post-title">A guide to Sharpen - a great tool for converting Java to C#</h2>
+							
+							<div>Following on from <a href="http://www.pauldb.me/post/14613852511/tips-for-porting-java-libraries-to-c">my tips on porting Java to C#</a>, I&#8217;ve put together a step by step guide to getting Sharpen working.<br/>This is primarily because the <a href="http://community.versant.com/Documentation/Reference/db4o-7.12/java/reference/html/Content/sharpen.html">Sharpen documentation</a> is minimal, confusing and difficult to follow if you are not a regular Eclipse and Ant user.  The few <a href="http://community.versant.com/Blogs/db4o/tabid/197/entryid/95/Default.aspx">tutorials</a> I could find were also confusing.</div>
+<div><span><br/></span></div>
+<div></div>
+<div>Sharpen does an excellent job of converting Java to C# while also accomodating common syntax and library differences between the languages.  <br/>This can be a massive time saver when you are faced with a Java library that contains 1000s of lines of code.</div>
+<div></div>
+<div>Before we dive into the details, let me make it clear that I see Sharpen as a way to kickstart the porting process, not as a one stop porting solution.  You should expect to get your hands dirty fixing up the C# that Sharpen produces. </div>
+<div><span><br/></span></div>
+<div></div>
+<div><span>OK, with my disclaimers out the way, lets get into the guide.  <br/>My focus is on getting started with the GUI tools, though Sharpen can also be setup as a command line facility.</span></div>
+<div><span><br/></span></div>
+<div></div>
+<div><strong>Prerequisites</strong></div>
+<div>
+<ul><li><a href="http://www.eclipse.org/downloads/">Eclipse</a>.  All you need is the Java Developers version.  Download &amp; install.<br/>Sharpen is an Eclipse plug-in so naturally you gonna need Eclipse here. </li>
+</ul></div>
+<ul><li>Sharpen.<br/>Don’t use the official Sharpen source code since it hasn&#8217;t been maintained. Download Lluis Sanchez’s already compiled <a href="https://github.com/mono/ngit/blob/master/gen/plugins/sharpen.core_1.0.0.jar">sharpen.core jar</a> found in the <a href="https://github.com/mono/ngit">ngit project on github</a>.<br/>That&#8217;s all your need for Sharpen.<br/>Lluis’s version has several bugfixes and is better maintained since the MonoDevelop team use Sharpen to keep their nGit port of JGit in sync. <br/><br/></li>
+<li>Sharpen config files.<br/>The actual Sharpen conversion process runs via an Ant build script and uses properties files to configure the environment.  <br/>Understanding how these work from the reference documentation was a pain.<br/>To make things simpler, I consolidated the configs a bit, merged in configs from Lluis&#8217;s nGit project and stripped out unused bits.<br/><a href="https://skydrive.live.com/redir.aspx?cid=8bffb8e593dcb561&amp;resid=8BFFB8E593DCB561!111&amp;parid=8BFFB8E593DCB561!109&amp;authkey=!ACodnt7cb17HNRI">Download my config files</a> zip and extract for later use below.  <br/><br/></li>
+<li>Sharpen C# utility classes.<br/>Sharpen preserves many Java method signatures with a set of special utility classes.  This avoids issues where C# does not match Java for common methods such as Substring().  Lluis has extended the Sharpen base utility set with more classes, so naturally we want to sponge off that too.<br/>Download all the classes found in the <a href="https://github.com/mono/ngit/tree/master/Sharpen/Sharpen">Sharpen folder</a> of the NGit project.</li>
+</ul><p><strong>&lt;aside&gt;Eclipse for Visual Studio people</strong></p>
+<p>If you come from an exclusively Visual Studio world then Eclipse can be a bit of a weird experience.  <br/>I&#8217;m not going to explain Eclipse here, but to help you get your head around it:</p>
+<ul><li>Eclipse Workspace = Visual Studio solution</li>
+<li>Eclipse Project = VS project</li>
+<li>Eclipse Build Path = VS project references</li>
+<li>Java JARs = .Net DLLs</li>
+<li>Eclipse Perspectives = Different UI configuration - kinda like how you can set up VS as being optimised for C# development or VB development or Web development</li>
+</ul><p><strong>Open the Java library in Eclipse</strong></p>
+<p>Check if the Java library came with an existing Eclipse .project file - it should be in the root folder of the source.  <br/>If you have a .project file then do the following:</p>
+<ol><li>Start up Eclipse</li>
+<li>If Eclipse asks you for a workspace location, choose the default.  </li>
+<li>If you have a &#8220;Welcome&#8221; screen, close it to reveal the Java perspective.</li>
+<li>Go to File -&gt; Import.  </li>
+<li>Choose the General -&gt; Existing Projects into Workspace option. Hit Next.</li>
+<li>Choose Select root directory and browse to the root of the Java library source.</li>
+<li>Eclipse should pick up at least one project in the Projects listing panel</li>
+<li>Make sure all projects listed are ticked and click Finish.</li>
+</ol><p>If there isn&#8217;t a .project file then you need to create a new Eclipse project for the source:</p>
+<ol><li><span>Go to File -&gt; New -&gt; Project</span></li>
+<li><span>Choose Java -&gt; Java Project and hit Next</span></li>
+<li><span>Enter a project name</span></li>
+<li><span>Uncheck the &#8220;Use default location&#8221; option and in the Location field, browse to the root folder of the Java library.  Hit Next</span></li>
+<li><span>In the Java Settings screen, you should see the various library folders picked up in the Source tab.</span></li>
+<li><span>Check your Java library folder for any external jar files.  These are normally in a &#8220;lib&#8221; folder in the root directory of the library.  If you find any, then you need to make sure these are listed in the Libraries tab.  If not, add these via the Libraries tab, using the Add External JARs option.<br/></span></li>
+<li><span>Click Finish to create the project</span></li>
+</ol><p>Eclipse will automatically compile the projects, much like VS does and will report any errors.  If you get errors then you need to fix them.  Google is your friend :)</p>
+<p>Make sure your Java library compiles.  It must compile for Sharpen to work with it.</p>
+<p><strong>Add Sharpen as an Eclipse plugin</strong></p>
+<p>There&#8217;s some stuff on the Sharpen documentation about how to build the Sharpen plugin from the source code, however thanks to the sharpen jar file we downloaded from Lluis&#8217;s github, we can skip that part.</p>
+<p>Simply copy the sharpen jar file to the &#8220;plugins&#8221; folder found in the root of your Eclipse installation.  Sharpen will now be picked up by Eclipse as a plug-in :)</p>
+<p><strong>Add the Sharpen config and build files to your Java project</strong></p>
+<p>Grab my config files from where ever you extracted them and add them into the root of your Java library project.  You do this by copying the files into the project folder found in your Eclipse workspace directory.</p>
+<p>They must be in the root of your Java project! </p>
+<p>Then edit the files as follows:</p>
+<p><strong>sharpen.properties</strong></p>
+<ol><li>Set <em>dir.workspace</em> to be the path to your Eclipse workspace root.  <br/>Use Unix slashes (/) for directories.</li>
+<li>Set <em>file.jvm.jdk1.5</em> to point at the java.exe found in your JDK installation.<br/>If you don&#8217;t have a JDK installed, <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">get it</a> and install now.</li>
+<li>Set <em>eclipse.home</em> to be the path to your Eclipse installation root.</li>
+<li>Ensure <em>eclipse.startup.jar</em> is set to the available eclipse.equinox.launcher jar found in the plugins subfolder of your Eclipse root.<br/><strong>This can be a big gotcha</strong>.<br/>It took me a while to figure out that my version of Eclipse had a newer launcher jar (version 1.2). So make double sure that this setting matches the file name of your launcher jar exactly.</li>
+</ol><p><strong>run-sharpen.xml</strong></p>
+<p>This is the Ant build definition.  Look for my CHECK THIS SETTING comments.</p>
+<ol><li>Ensure the dir attribute of the &lt;target&gt;&lt;copy&gt;&lt;fileset&gt; element is set to the subfolder of your Java library containing the Java source files to convert.<br/>This is usually the &#8220;src&#8221; folder, but if there are unit tests included in say a &#8220;test&#8221; folder then you will need to run Sharpen once with dir = src and once with dir =  test to convert all Java code.</li>
+<li>Ensure that all external JAR files your Java project references are listed as &lt;arg&gt; value and path pairs.  See the examples I&#8217;ve included in the file (don&#8217;t forget to remove these too!).  <br/>To get a list of your project&#8217;s external JAR references, right click the project in Package Explorer, go to Build Path -&gt; Configure Build Path and check the Libraries tab.<br/>Sharpen will build your Java project before conversion - this is why it needs to know about all the external reference JARs. </li>
+</ol><p><strong>sharpen-all-options</strong></p>
+<p>This file allows you to customise how Sharpen converts the Java code.  The Sharpen documentation <a href="http://community.versant.com/Documentation/Reference/db4o-7.12/java/reference/html/Content/sharpen/sharpen_command-line_arguments.html%20">outlines these options</a> pretty well.  <br/>The options file I included is based on Lluis&#8217;s one, but edit as you wish.  <br/>One change you should make is to change your Java library&#8217;s base namespace to a C# style one in all the generated cs files.<br/>To do this, edit the sample line &#8220;-namespaceMapping org.mylibrary NMyLibrary&#8221; as needed.</p>
+<p><strong>header.txt</strong></p>
+<p>The text in this file will be automatically added to the top of every converted CS file.  Edit this as needed.  Preferably remove my idiot message.  <br/>Make sure that you honour the license statements and conditions of the Java library - porting it to .Net does not exempt you from licenses!</p>
+<p>Whew.  OK so tons of config and setup stuff done.  </p>
+<p>You are now ready to convert your Java code!</p>
+<p><strong>Run Sharpen</strong></p>
+<ol><li>Right click on the run-sharpen.xml file in the Package Explorer and go to Run As -&gt; Ant Build.</li>
+<li>You should see a Console pane come up and Ant will start running.  <br/>You want to see a BUILD SUCCESSFUL message at the end. </li>
+<li>The converted C# files will be output to the sharpen/sharpened.net subfolder of your Java project&#8217;s root folder.  <br/>Open Windows Explorer and navigate there to delight in seeing many .cs files :)</li>
+</ol><p><strong>Add the Sharpen utility classes to your C# project</strong></p>
+<p>So now that you have converted a zillion lines of Java to C# in 20 seconds with Sharpen, you naturally will want to add the converted source to your .Net project.</p>
+<p>When you do, expect to see a stack of compilation errors related to missing Sharpen classes.  <br/>This is because the Sharpen-generated C# code uses a number of utility classes to bridge the gap between Java and C# method signatures.</p>
+<p>This is easy to sort out.  Add the Sharpen folder that you downloaded in the Prerequisites section to your project in Visual Studio.  Make sure to include all the cs files found in that Sharpen folder.</p>
+<p><strong>Now the hard work begins&#8230;</strong></p>
+<p>At this stage, everything should be sweet as far as the Sharpen part goes.  <br/>Just don&#8217;t expect the C# code to compile :)</p>
+<p>Remember Sharpen converts the code as best as it can, but you still need to put in the elbow grease to get your port completed and compiling.</p>
+<p>The good news is you now have a great starting point of generated C# to work with. </p>
+						</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+						
+						
+						<div class="meta">
+							<ul class="meta-list">
+								
+								<li class="tags">
+									<ul class="tag-list">
+										
+										<li><a href="http://pauldb.tumblr.com/tagged/sharpen">#sharpen</a></li>
+										
+										<li><a href="http://pauldb.tumblr.com/tagged/csharp">#csharp</a></li>
+										
+										<li><a href="http://pauldb.tumblr.com/tagged/java">#java</a></li>
+										
+										<li><a href="http://pauldb.tumblr.com/tagged/eclipse">#eclipse</a></li>
+										
+									</ul>
+								</li>
+								
+								<li class="date"><a href="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java" title="Wed. December 28, 2011 @ 11:57 pm"><span class="icon"></span>2 years ago</a></li>
+								<li class="notes"><a href="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java#notes"><span class="icon"></span>9</a></li>
+								<li class="comments hidden"><a id="dsq-14916717048" href="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java#disqus_thread"><span class="icon"></span>Comments</a></li>
+								<li class="permalink"><a href="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java"><span class="icon"></span>Permalink</a></li>
+								<li class="share">
+									<a class="share-btn" href="http://tmblr.co/ZVuYOwDv6mdu" data-permalink="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java">Share</a>
+									<div class="share-box">
+										<div class="share-box-inside clearfix">
+											<input class="shortlink" type="text" readonly="" value="http://tmblr.co/ZVuYOwDv6mdu">
+											<div class="plusone-btn"><div class="g-plusone"  data-size="medium" data-count="true" data-href="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java"></div></div>
+											<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java" data-text="" data-count="none" data-via="pauldbau">Tweet</a>
+											<div class="like-button"></div>
+										</div><!-- /.share-box-inside -->
+									</div><!-- /.share-box -->
+								</li><!-- /.share -->
+							</ul><!--/.meta-list -->
+						</div><!-- /.meta -->
+						
+
+						
+						
+						<div id="notes">			
+							<h2>9 Notes<span class="sep">/</span> 
+							<a id="notes-toggle" href="#"><span class="label">Hide</span><span class="icon up"></span></a></h2>
+							<ol class="notes"><!-- START NOTES --><li class="note like tumblelog_jeanmann without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://jeanmann.com/" title=" " rel="nofollow"><img src="http://assets.tumblr.com/images/default_avatar/pyramid_closed_16.png" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://jeanmann.com/" title="" rel="nofollow">jeanmann</a> likes this</span><div class="clear"></div></li><li class="note like tumblelog_kerstshultz without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://kerstshultz.tumblr.com/" title="Без названия " rel="nofollow"><img src="http://24.media.tumblr.com/avatar_628661e1fe49_16.png" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://kerstshultz.tumblr.com/" title="Без названия" rel="nofollow">kerstshultz</a> likes this</span><div class="clear"></div></li><li class="note reblog tumblelog_ekkus93 without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://ekkus93.tumblr.com/" title="Phil Chin"><img src="http://25.media.tumblr.com/avatar_d3c1d00e0bf2_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://ekkus93.tumblr.com/post/26895815884"><a rel="nofollow" href="http://ekkus93.tumblr.com/" class="tumblelog" title="Phil Chin">ekkus93</a> reblogged this from <a rel="nofollow" href="http://pauldb.tumblr.com/" class="source_tumblelog" title="PaulDB.getWords()">pauldb</a></span><div class="clear"></div></li><li class="note like tumblelog_redwarp without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://redwarp.tumblr.com/" title="Sans titre " rel="nofollow"><img src="http://25.media.tumblr.com/avatar_45e3d8d9a08c_16.png" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://redwarp.tumblr.com/" title="Sans titre" rel="nofollow">redwarp</a> likes this</span><div class="clear"></div></li><li class="note reblog tumblelog_pauldb original_post without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://pauldb.tumblr.com/" title="PaulDB.getWords()"><img src="http://25.media.tumblr.com/avatar_ea54e3f8613b_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://pauldb.tumblr.com/post/14916717048"><a rel="nofollow" href="http://pauldb.tumblr.com/" class="tumblelog" title="PaulDB.getWords()">pauldb</a> posted this</span><div class="clear"></div></li><!-- END NOTES --></ol>
+
+						</div><!-- /.notes -->
+						
+						
+						
+						<!-- DISQUS COMMENTS -->
+						<div id="disqus">
+							<h2>Recent comments</h2>
+							<script type="text/javascript">var disqus_url = "http://pauldb.tumblr.com/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java"; var disqus_title ="A guide to Sharpen - a great tool for converting Java to C#";</script>
+							<div id="disqus_thread"></div>
+							<script type="text/javascript">
+							   var disqus_identifier = 14916717048;
+							  (function() {
+							   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							   dsq.src = 'http://' + disqusShortname + '.disqus.com/embed.js';
+							   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							  })();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=">comments powered by Disqus.</a></noscript>
+							<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+						</div><!-- /#disqus -->
+						
+						
+						
+					</div><!-- /.post-panel -->
+					<div class="post-shadow"></div>
+				</div><!-- /.post -->				
+			
+			<!-- END POSTS -->
+			
+			
+			
+			
+			
+			<div id="pagination">
+				<div class="nextprev">
+					<a class="prev" href="http://pauldb.tumblr.com/post/15915237420"><span>&larr; Previous</span></a> <span class="sep">&bull;</span>
+					<a class="next" href="http://pauldb.tumblr.com/post/14613852511"><span>Next &rarr;</span></a>
+				</div>
+			</div><!--/#pagination -->
+			
+
+		</div><!-- /#content -->
+
+		<!-- SIDEBAR -->
+		<div id="sidebar">
+			<div id="blog-info" class="side-box">
+				
+
+				
+				
+				
+				<p><a href="/"><img class="large-portrait" src="http://static.tumblr.com/ahzfdct/l65lw376l/myprofilepic.jpg" alt="Portrait/Logo"/></a></p>
+				
+				
+				
+				<div class="description">
+					
+					
+					Musings, rants, mainly a coder geek blog with random bits of startup insights as I have them			
+				</div><!--/.description-->
+					
+			</div><!--/#blog-info -->
+			
+			
+			
+			
+			
+			
+			<div class="side-box ruled-top">
+				<h2>Follow me elsewhere</h2>
+				<ul id="socialize">
+					
+					
+					
+					
+					
+					<li class="twitter"><a href="http://www.twitter.com/pauldbau" title="@pauldbau on Twitter">@pauldbau on Twitter</a></li>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<li class="linkedin"><a href="http://au.linkedin.com/in/pauldb" title="Linkedin Profile">Linkedin Profile</a></li>
+					
+					
+				</ul>
+			</div>
+			
+			
+			
+			
+			<div id="twitter" class="side-box ruled-top">
+				<h2>Twitter</h2>
+				<p class="loading-text">loading tweets&hellip;</p>
+			</div>
+			
+			
+			
+			
+			
+			
+
+		</div><!-- /#sidebar -->
+		
+		<!-- FOOTER -->
+		<div id="footer">
+			
+			<div id="footer-end" class="ruled-top">	 
+				<ul id="footer-links">
+					<li><a href="/rss">RSS</a></li>
+					<li><a href="/random">Random</a></li>
+					<li><a href="/archive">Archive</a></li>
+					<li><a href="/ask">Ask me anything</a></li>
+					
+					<li><a href="/mobile">Mobile</a></li>
+				</ul>
+				<p class="credits"><a href="http://effectortheme.tumblr.com">Effector Theme</a> by <a href="http://www.carlofranco.ca">Carlo Franco</a>.</p>
+				<span class="tumblr">Powered by <a href="http://www.tumblr.com/">Tumblr</a></span>
+			</div><!-- /#footer-end -->
+		</div><!-- /#footer -->
+	</div><!-- /#page -->
+
+<!-- Footer Scripts -->
+<script type="text/javascript">(function(B,C){B[C]=B[C].replace(/\bno-js\b/,'js')})(document.documentElement,'className');</script>
+<script src="http://static.tumblr.com/xgwqnql/XPSlbx7np/jquery-1.4.4.min.js"></script>
+<script src="http://static.tumblr.com/njty47g/d1Mlpn53c/plugins.js"></script>
+<script src="http://static.tumblr.com/xgwqnql/41Lluodtm/effector-1.2.6.min.js"></script>
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		var _gaq=[["_setAccount","UA-27666680-1"],["_trackPageview"]];
+		(function(d,t){
+			var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
+			g.async=1;
+	    	g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+	    	s.parentNode.insertBefore(g,s)
+	    }(document,"script"));
+	</script>
+
+
+
+<!-- BEGIN TUMBLR CODE --><iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "http://assets.tumblr.com/analytics.html?eff8b95c853b77f47eaca7448d789925#http://pauldb.tumblr.com"
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/post/14916717048/a-guide-to-sharpen-a-great-tool-for-converting-java?route=%2Fpost%2F%3Aid%2F%3Asummary'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+    })();
+</script><script>
+      var _qevents = _qevents || [];
+
+      (function() {
+       var s = document.createElement('script');
+       var el = document.getElementsByTagName('script')[0];
+       s.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       el.parentNode.insertBefore(s, el);
+      })();
+    </script><script type="text/javascript">
+        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );
+    </script><noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/></div></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1394296710&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvcGF1bGRiLnR1bWJsci5jb21cL3Bvc3RcLzE0OTE2NzE3MDQ4XC9hLWd1aWRlLXRvLXNoYXJwZW4tYS1ncmVhdC10b29sLWZvci1jb252ZXJ0aW5nLWphdmEiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSJ9&U=HJMLIDCKJC&K=7aeb942c27c9d33511d638d24718d18a631fe2e912b148a39d7a3c496be21816&R=https%3A%2F%2Fwww.google.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1394296710&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvcGF1bGRiLnR1bWJsci5jb21cL3Bvc3RcLzE0OTE2NzE3MDQ4XC9hLWd1aWRlLXRvLXNoYXJwZW4tYS1ncmVhdC10b29sLWZvci1jb252ZXJ0aW5nLWphdmEiLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsIm5vc2NyaXB0IjoxfQ==&U=HJMLIDCKJC&K=13fe61bd85ce8fed0d037f8211bbd2c79e20c902c0a958f1c39aec88394411f7&R=https%3A%2F%2Fwww.google.com%2F"></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1394296710&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3BhdWxkYi50dW1ibHIuY29tXC9wb3N0XC8xNDkxNjcxNzA0OFwvYS1ndWlkZS10by1zaGFycGVuLWEtZ3JlYXQtdG9vbC1mb3ItY29udmVydGluZy1qYXZhIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiMTQ5MTY3MTcwNDgiLCJibG9naWQiOiIzNzA2NTUwMSIsInNvdXJjZSI6MzN9XX0=&U=OIODHBABEA&K=efee0a824c41c023e4750cd443824029f443667264e5cc074996a4cb3c218cbb&R=https%3A%2F%2Fwww.google.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1394296710&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3BhdWxkYi50dW1ibHIuY29tXC9wb3N0XC8xNDkxNjcxNzA0OFwvYS1ndWlkZS10by1zaGFycGVuLWEtZ3JlYXQtdG9vbC1mb3ItY29udmVydGluZy1qYXZhIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiMTQ5MTY3MTcwNDgiLCJibG9naWQiOiIzNzA2NTUwMSIsInNvdXJjZSI6MzN9XSwibm9zY3JpcHQiOjF9&U=OIODHBABEA&K=dab7efb538e522ff3fa508dd5d4fb5c3f10b9ddd5a86f7ce07baa7f2c4b4cb22&R=https%3A%2F%2Fwww.google.com%2F"></noscript><script>
+                (function() {
+                    var s = document.createElement('script');
+                    var el = document.getElementsByTagName('script')[0]; 
+                    s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://l') + '.yimg.com/ss/rapid-3.14.js';
+                    s.onload = function(){
+                        var YAHOO = window.YAHOO;
+                        if (YAHOO) {
+                            YAHOO.i13n.beacon_server = 'nol.yahoo.com';
+                            var keys = { pd:'/post/:id/:summary', _li:0, i_rad:0, i_strm:0 };
+                            var conf = {
+                                                                spaceid:1197719230,
+                                client_only:1,
+                                yql_enabled:false,
+                                keys:keys
+                            }
+                            YAHOO.rapid = new YAHOO.i13n.Rapid(conf);
+                        }
+                    }
+                    el.parentNode.insertBefore(s, el);
+                })();
+            </script><iframe id="tumblr_controls" class="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" src="http://assets.tumblr.com/assets/html/iframe/o.html?_v=7f866037652c062c35ba08aeebcf786e#src=http%3A%2F%2Fpauldb.tumblr.com%2Fpost%2F14916717048%2Fa-guide-to-sharpen-a-great-tool-for-converting-java&amp;pid=14916717048&amp;rk=XriulghB&amp;lang=en_US&amp;name=pauldb&amp;avatar=http%3A%2F%2F24.media.tumblr.com%2Favatar_ea54e3f8613b_64.png&amp;title=PaulDB.getWords%28%29&amp;url=http%3A%2F%2Fpauldb.tumblr.com%2F&amp;page_slide=slide"></iframe><div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://www.tumblr.com/assets/html/iframe/teaser.html?_v=9513ea05896921424148dfeafafe2a08#src=http%3A%2F%2Fpauldb.tumblr.com%2Fpost%2F14916717048%2Fa-guide-to-sharpen-a-great-tool-for-converting-java&amp;pid=14916717048&amp;rk=XriulghB&amp;lang=en_US&amp;name=pauldb&amp;avatar=http%3A%2F%2F24.media.tumblr.com%2Favatar_ea54e3f8613b_64.png&amp;title=PaulDB.getWords%28%29&amp;url=http%3A%2F%2Fpauldb.tumblr.com%2F&amp;page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div><script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=8c01a72948c82f1d8aedb48d4192bca0");
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><!-- END TUMBLR CODE -->
+
+</body>
+</html>

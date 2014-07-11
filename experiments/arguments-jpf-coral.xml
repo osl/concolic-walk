@@ -1,0 +1,3 @@
+<project>
+  <property name="jpf.arguments" value="+symbolic.dp=coral" />
+</project>

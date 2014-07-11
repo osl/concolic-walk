@@ -1,0 +1,18 @@
+ 
+ 
+--- Description
+passing test
+ 
+MathSin.test(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(MathSin))]
+public void test911()
+{
+    MathSin.test(0);
+}
+
+
+ 
+ 

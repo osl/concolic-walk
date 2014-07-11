@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = tsafe.Conflict
+symbolic.method = tsafe.Conflict.snippet(sym#sym#sym#sym#sym#sym#sym)

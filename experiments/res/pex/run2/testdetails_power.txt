@@ -1,0 +1,81 @@
+ 
+--- Description
+passing test
+ 
+PowExample.Test(27, 729);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(PowExample))]
+public void Test95101()
+{
+    PowExample.Test(27, 729);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+PowExample.Test(7, 51);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(PowExample))]
+public void Test92201()
+{
+    PowExample.Test(7, 51);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+PowExample.Test(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(PowExample))]
+public void Test88601()
+{
+    PowExample.Test(0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+PowExample.Test(1, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(PowExample))]
+public void Test87801()
+{
+    PowExample.Test(1, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+PowExample.Test(1, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(PowExample))]
+public void Test38501()
+{
+    PowExample.Test(1, 0);
+}
+
+
+ 
+ 

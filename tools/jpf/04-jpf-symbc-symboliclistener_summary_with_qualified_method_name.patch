@@ -1,0 +1,40 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+index ed656b5..2ca64fa 100644
+--- a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
++++ b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+@@ -209,7 +209,7 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 
+ 					MethodSummary methodSummary = new MethodSummary();
+ 
+-					methodSummary.setMethodName(shortName);
++					methodSummary.setMethodName(className + "." + shortName);
+ 					Object [] argValues = md.getArgumentValues(ti);
+ 					String argValuesStr = "";
+ 					for (int i=0; i<argValues.length; i++){
+@@ -405,11 +405,13 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 							if(allSummaries.get(longName)!=null) // recursive call
+ 								longName = longName + methodSummary.hashCode(); // differentiate the key for recursive calls
+ 							allSummaries.put(longName,methodSummary);
+-							System.out.println("*************Summary***************");
+-							System.out.println("PC is:"+pc.toString());
+-							if(result!=null){
++							if (SymbolicInstructionFactory.debugMode) {
++							    System.out.println("*************Summary***************");
++							    System.out.println("PC is:"+pc.toString());
++							    if(result!=null){
+ 								System.out.println("Return is:  "+result);
+ 								System.out.println("***********************************");
++							    }
+ 							}
+ 						}
+ 					}
+@@ -447,6 +449,9 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 				  StringTokenizer st = new StringTokenizer(symValues, ",");
+ 				  StringTokenizer st2 = new StringTokenizer(argValues, ",");
+ 				  StringTokenizer st3 = new StringTokenizer(argTypes, ",");
++				  if (!argTypes.isEmpty() && argValues.isEmpty()) {
++				      continue;
++				  }
+ 				  while(st2.hasMoreTokens()){
+ 					  String token = "";
+ 					  String actualValue = st2.nextToken();

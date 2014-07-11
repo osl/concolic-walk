@@ -1,0 +1,172 @@
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision5(5190615745867824149L, 967);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision5548()
+{
+    global::EffectiveJavaHashCode.TestCollision5(5190615745867824149L, 967);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision5(0L, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision5375()
+{
+    global::EffectiveJavaHashCode.TestCollision5(0L, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision4(972, 1069613732347253416L, 806);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision4897()
+{
+    global::EffectiveJavaHashCode.TestCollision4(972, 1069613732347253416L, 806);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision4(0, 0L, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision4375()
+{
+    global::EffectiveJavaHashCode.TestCollision4(0, 0L, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision3
+    (-6861066631586422096L, 289145447401169036L);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision3223()
+{
+    global::EffectiveJavaHashCode.TestCollision3
+        (-6861066631586422096L, 289145447401169036L);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision3(0L, 0L);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision3356()
+{
+    global::EffectiveJavaHashCode.TestCollision3(0L, 0L);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision2
+    (5773459558044835624L, 722, -4827177548889644288L, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision2402()
+{
+    global::EffectiveJavaHashCode.TestCollision2
+        (5773459558044835624L, 722, -4827177548889644288L, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision2(0L, 0, 0L, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision2972()
+{
+    global::EffectiveJavaHashCode.TestCollision2(0L, 0, 0L, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision1
+    (64, 23372527030014084L, 565, 903, 1261113460055621904L, 805);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision1814()
+{
+    global::EffectiveJavaHashCode.TestCollision1
+        (64, 23372527030014084L, 565, 903, 1261113460055621904L, 805);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::EffectiveJavaHashCode.TestCollision1(0, 0L, 0, 0, 0L, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::EffectiveJavaHashCode))]
+public void TestCollision1842()
+{
+    global::EffectiveJavaHashCode.TestCollision1(0, 0L, 0, 0, 0L, 0);
+}
+
+
+ 
+ 

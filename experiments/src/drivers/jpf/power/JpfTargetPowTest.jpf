@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetPowTest
+symbolic.method = concolic.PowExample.test(sym#sym)

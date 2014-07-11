@@ -1,0 +1,5 @@
+EffectiveJavaHashCode.testCollision1(int,long,int,int,long,int):10000
+EffectiveJavaHashCode.testCollision2(long,int,long,int):10000
+EffectiveJavaHashCode.testCollision3(long,long):10000
+EffectiveJavaHashCode.testCollision4(int,long,int):10000
+EffectiveJavaHashCode.testCollision5(long,int):10000

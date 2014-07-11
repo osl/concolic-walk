@@ -1,0 +1,4 @@
+/*
+ * Automatically converted from Java to C# using Sharpen.
+ */
+

@@ -1,0 +1,65 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/SymbolicInstructionFactory.java b/src/main/gov/nasa/jpf/symbc/SymbolicInstructionFactory.java
+index 249b829..e36563a 100644
+--- a/src/main/gov/nasa/jpf/symbc/SymbolicInstructionFactory.java
++++ b/src/main/gov/nasa/jpf/symbc/SymbolicInstructionFactory.java
+@@ -503,6 +503,10 @@ public class SymbolicInstructionFactory extends gov.nasa.jpf.jvm.bytecode.Instru
+ 	static public boolean heuristicPartitionMode;
+ 	static public int MaxTries = 1;
+ 
++  static public int maxPcLength;
++  static public long maxPcMSec;
++  static public long startSystemMillis;
++
+ 	ClassInfo ci;
+ 	ClassInfoFilter filter; // TODO: fix; do we still need this?
+ 
+@@ -589,6 +593,21 @@ public class SymbolicInstructionFactory extends gov.nasa.jpf.jvm.bytecode.Instru
+ 				ProblemCoral.configure(conf);
+ 			}
+ 
++      maxPcLength = conf.getInt("symbolic.max_pc_length", Integer.MAX_VALUE);
++      if (maxPcLength == -1) {
++        maxPcLength = Integer.MAX_VALUE;
++      }
++      if (maxPcLength <= 0) {
++        throw new IllegalArgumentException("symbolic.max_pc_length must be positive (>0), but was " + maxPcLength);
++      }
++      System.out.println("symbolic.max_pc_length=" + maxPcLength);
++
++      maxPcMSec = conf.getLong("symbolic.max_pc_msec", 0);
++      if (maxPcLength < 0) {
++        throw new IllegalArgumentException("symbolic.max_pc_msec must be non-negative (>=0), but was " + maxPcMSec);
++      }
++      System.out.println("symbolic.max_pc_msec=" + maxPcMSec);
++      startSystemMillis = System.currentTimeMillis();
+ 		}
+ 
+ 		String regress = conf.getProperty("symbolic.regression_output");
+diff --git a/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java b/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java
+index 724b6f3..d704396 100644
+--- a/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java
++++ b/src/main/gov/nasa/jpf/symbc/numeric/SymbolicConstraintsGeneral.java
+@@ -59,6 +59,16 @@ public class SymbolicConstraintsGeneral {
+ 			return true;
+ 		}
+ 
++		if (pc.count() > SymbolicInstructionFactory.maxPcLength) {
++		    System.out.println("## Warning: Path condition exceeds symbolic.max_pc_length=" +
++				       SymbolicInstructionFactory.maxPcLength + ".  Pretending it is unsatisfiable.");
++		    return false;
++		}
++		if (SymbolicInstructionFactory.maxPcMSec > 0 && System.currentTimeMillis() - SymbolicInstructionFactory.startSystemMillis > SymbolicInstructionFactory.maxPcMSec) {
++		    System.out.println("## Warning: Exploration time exceeds symbolic.max_pc_msec=" +
++				       SymbolicInstructionFactory.maxPcMSec + ".  Pretending all paths are unsatisfiable.");
++		    return false;
++		}
+ 
+ //		if (SymbolicInstructionFactory.debugMode)
+ //			System.out.println("checking: PC "+pc);
+@@ -285,4 +295,4 @@ public class SymbolicConstraintsGeneral {
+ 			return realVars;
+ 		}
+ 	}
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,7 @@
+<project default="compile">
+  <import file="../common.xml"/>
+
+  <path id="classpath.program">
+    <pathelement location="${tool.jpf-symbc.dir}/build/jpf-symbc-annotations.jar" />
+  </path>
+</project>

@@ -1,0 +1,50 @@
+ 
+ 
+--- Description
+passing test
+ 
+global::Early.CommitEarly(1, 67);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Early))]
+public void CommitEarly493()
+{
+    global::Early.CommitEarly(1, 67);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Early.CommitEarly(0, 3);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Early))]
+public void CommitEarly358()
+{
+    global::Early.CommitEarly(0, 3);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Early.CommitEarly(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Early))]
+public void CommitEarly754()
+{
+    global::Early.CommitEarly(0, 0);
+}
+
+
+ 
+ 

@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetMysin
+symbolic.method = JpfTargetMysin.static_mysin(sym)

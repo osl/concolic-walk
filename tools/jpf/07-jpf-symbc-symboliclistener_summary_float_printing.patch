@@ -1,0 +1,20 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+index f8763d0..a209388 100644
+--- a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
++++ b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+@@ -472,8 +472,15 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 						      if (actualType == Types.T_LONG) {
+ 							  suffix = "l";
+ 						      } else if (actualType == Types.T_FLOAT) {
++							  val = String.valueOf(Double.valueOf(val).floatValue());
+ 							  suffix = "f";
+ 						      }
++						      if (val.endsWith("Infinity")) {
++							  boolean isNegative = val.startsWith("-");
++							  val = ((actualType == Types.T_DOUBLE) ? "Double" : "Float");
++							  val += isNegative ? ".NEGATIVE_INFINITY" : ".POSITIVE_INFINITY";
++							  suffix = "";
++						      }
+ 						      testCase = testCase + val + suffix + ",";
+ 						  }
+ 						  else if (actualType == Types.T_BOOLEAN){ //translate boolean values represented as ints

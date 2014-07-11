@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetCollision1
+symbolic.method = EffectiveJavaHashCode.testCollision1(sym#sym#sym#sym#sym#sym)

@@ -1,0 +1,3 @@
+<project default="generate-tests">
+  <import file="../../../../common-randoop.xml"/>
+</project>

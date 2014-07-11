@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetApollo
+symbolic.method = Apollo.mainSymbolicWithFixedOutput(sym#sym#sym#sym#sym#sym)

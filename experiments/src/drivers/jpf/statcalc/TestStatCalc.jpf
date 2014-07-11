@@ -1,0 +1,6 @@
+@include ../common-jpf.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = concolic.TestStatCalc
+symbolic.method = concolic.TestStatCalc.run(sym)

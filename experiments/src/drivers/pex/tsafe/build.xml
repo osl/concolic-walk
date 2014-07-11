@@ -1,0 +1,5 @@
+<project default="generate-tests">
+  <property name="test.imports" value="--import tsafe.Conflict
+				       --import tsafe.TurnLogic" />
+  <import file="../../../../common-pex.xml"/>
+</project>

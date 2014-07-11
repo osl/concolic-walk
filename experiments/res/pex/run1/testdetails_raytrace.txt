@@ -1,0 +1,1112 @@
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.Vector3DNormalize((float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void Vector3DNormalize51301()
+{
+    global::TestDrivers.Vector3DNormalize((float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.Vector3DNormalize
+    ((float)0.93272614479064941, (float)double.NegativeInfinity, (float)0.5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void Vector3DNormalize28201()
+{
+    global::TestDrivers.Vector3DNormalize
+        ((float)0.93272614479064941, (float)double.NegativeInfinity, (float)0.5);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0.93272614479064941, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)1.9679080067612207E-17, 
+                                                                   (float)4.32839097896931E-10, (float)(-40.558841705322266), 
+                                                                   (float)1.0420295372699534E-35, (float)1.1865550003471407E-30, (float)0, 
+                                                                   2, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade225()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0.93272614479064941, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)1.9679080067612207E-17, 
+                                                                       (float)4.32839097896931E-10, (float)(-40.558841705322266), 
+                                                                       (float)1.0420295372699534E-35, (float)1.1865550003471407E-30, (float)0, 
+                                                                       2, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     1, (float)0.5, (float)0.93272614479064941, 
+     (float)double.NegativeInfinity, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade83801()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         1, (float)0.5, (float)0.93272614479064941, 
+         (float)double.NegativeInfinity, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0.93272614479064941, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade82601()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0.93272614479064941, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)double.PositiveInfinity, (float)0, (float)0, 
+     (float)double.PositiveInfinity, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     0, (float)0, (float)0, (float)0, (float)0.5, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade62901()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)double.PositiveInfinity, (float)0, (float)0, 
+         (float)double.PositiveInfinity, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         0, (float)0, (float)0, (float)0, (float)0.5, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)1, (float)0, 
+     (float)0, (float)0.93272614479064941, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)(-2.7910480499267578), (float)0, (float)0.5, 
+     (float)double.NegativeInfinity, (float)0, (float)0, 
+     3, (float)0.5, (float)0, 
+     (float)3.4042622141192118E-28, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade59101()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)1, (float)0, 
+         (float)0, (float)0.93272614479064941, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)(-2.7910480499267578), (float)0, (float)0.5, 
+         (float)double.NegativeInfinity, (float)0, (float)0, 
+         3, (float)0.5, (float)0, 
+         (float)3.4042622141192118E-28, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)double.PositiveInfinity, (float)0.5, (float)2.7182817459106445, 
+     (float)2.7182817459106445, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     0, (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+                            (float)double.NegativeInfinity, (float)double.PositiveInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade54101()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)double.PositiveInfinity, (float)0.5, (float)2.7182817459106445, 
+         (float)2.7182817459106445, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         0, (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+                                (float)double.NegativeInfinity, (float)double.PositiveInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)(-0.0017226469935849309), (float)double.NegativeInfinity, (float)0, 
+     (float)6.2831854820251465, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     0, (float)0, (float)0, 
+     (float)0, (float)0, (float)(-1.9276002645492554), (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade48401()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)(-0.0017226469935849309), (float)double.NegativeInfinity, (float)0, 
+         (float)6.2831854820251465, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         0, (float)0, (float)0, 
+         (float)0, (float)0, (float)(-1.9276002645492554), (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0.93272614479064941, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)6.2831854820251465, (float)0, (float)0.5, 
+     (float)0, (float)5.5367536544799805, (float)6.2831854820251465, 
+     1, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade37901()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0.93272614479064941, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)6.2831854820251465, (float)0, (float)0.5, 
+         (float)0, (float)5.5367536544799805, (float)6.2831854820251465, 
+         1, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, 
+     (float)0, (float)0, (float)0, (float)0, (float)3, (float)1, (float)4, 
+     (float)(-0.10000000149011612), (float)(-0.10000000149011612), (float)0, 
+     (float)0, (float)0, (float)0, 
+     2, (float)3, (float)0, (float)4, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade37001()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, 
+         (float)0, (float)0, (float)0, (float)0, (float)3, (float)1, (float)4, 
+         (float)(-0.10000000149011612), (float)(-0.10000000149011612), (float)0, 
+         (float)0, (float)0, (float)0, 
+         2, (float)3, (float)0, (float)4, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, 
+     (float)0, (float)0, (float)0, (float)0, (float)1236, (float)3, (float)8855, 
+     (float)0, (float)(-0.10000000149011612), (float)(-0.10000000149011612), 
+     (float)0, (float)0.10000000149011612, (float)0, 
+     2, (float)1236, (float)2, (float)8855, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade36601()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, 
+         (float)0, (float)0, (float)0, (float)0, (float)1236, (float)3, (float)8855, 
+         (float)0, (float)(-0.10000000149011612), (float)(-0.10000000149011612), 
+         (float)0, (float)0.10000000149011612, (float)0, 
+         2, (float)1236, (float)2, (float)8855, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0.93272614479064941, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)1.0612936019897461, (float)0, (float)2.7182817459106445, 
+     (float)0.066089719533920288, 
+     (float)(-2287.603271484375), (float)3.1415927410125732, 
+     3, (float)0, (float)1, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade33301()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0.93272614479064941, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)1.0612936019897461, (float)0, (float)2.7182817459106445, 
+         (float)0.066089719533920288, 
+         (float)(-2287.603271484375), (float)3.1415927410125732, 
+         3, (float)0, (float)1, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade26001()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)3, (float)1, (float)4, 
+     (float)(-0.10000000149011612), (float)(-0.10000000149011612), (float)0, 
+     (float)0, (float)0, (float)0, 
+     2, (float)3, (float)0, (float)4, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade23301()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)3, (float)1, (float)4, 
+         (float)(-0.10000000149011612), (float)(-0.10000000149011612), (float)0, 
+         (float)0, (float)0, (float)0, 
+         2, (float)3, (float)0, (float)4, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SurfaceShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     2, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SurfaceShade1201()
+{
+    global::TestDrivers.SurfaceShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         2, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)1, (float)1, (float)0, 
+     (float)0, (float)0, (float)0, (float)1, 
+     (float)1.0420295372699534E-35, (float)1.1865550003471407E-30, 
+     (float)0, (float)0, 
+     (float)4.32839097896931E-10, (float)1.9679080067612207E-17, (float)1, 
+     (float)0, (float)0, 3, (float)3, (float)1, (float)5, (float)0, (float)0, 
+                                                                             (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade759()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)1, (float)1, (float)0, 
+         (float)0, (float)0, (float)0, (float)1, 
+         (float)1.0420295372699534E-35, (float)1.1865550003471407E-30, 
+         (float)0, (float)0, 
+         (float)4.32839097896931E-10, (float)1.9679080067612207E-17, (float)1, 
+         (float)0, (float)0, 3, (float)3, (float)1, (float)5, (float)0, (float)0, 
+                                                                                 (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, (float)0, 
+     (float)0, (float)0, (float)0, (float)5904, 
+     (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+     (float)4679, (float)(-1.0267510414123535), 
+     (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+     (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade527()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)1, (float)0, 
+         (float)0, (float)0, (float)0, (float)5904, 
+         (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+         (float)4679, (float)(-1.0267510414123535), 
+         (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+         (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)1, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)5904, 
+     (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+     (float)4679, (float)(-1.0267510414123535), 
+     (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+     (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade80701()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)1, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)5904, 
+         (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+         (float)4679, (float)(-1.0267510414123535), 
+         (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+         (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)5904, 
+     (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+     (float)4679, (float)(-1.0267510414123535), 
+     (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+     (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade664()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)5904, 
+         (float)6.2831854820251465, (float)1.6059256832154543E-25, 
+         (float)4679, (float)(-1.0267510414123535), 
+         (float)0.5, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+         (float)(-9397.0078125), (float)2.7182817459106445, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0.93272614479064941, 
+     (float)double.NegativeInfinity, (float)0.5, 2, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade113()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0.93272614479064941, 
+         (float)double.NegativeInfinity, (float)0.5, 2, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 3, (float)3, 
+     (float)1, (float)5, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade268()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 3, (float)3, 
+         (float)1, (float)5, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)1883.199951171875, 
+     (float)535, (float)609.79998779296875, 
+     (float)5904, (float)1883.199951171875, 
+     (float)535, (float)609.79998779296875, (float)0, 
+     (float)0, (float)0, 2, (float)1883.199951171875, 
+     (float)535, (float)609.79998779296875, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade973()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)1883.199951171875, 
+         (float)535, (float)609.79998779296875, 
+         (float)5904, (float)1883.199951171875, 
+         (float)535, (float)609.79998779296875, (float)0, 
+         (float)0, (float)0, 2, (float)1883.199951171875, 
+         (float)535, (float)609.79998779296875, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade110()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade807()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 2, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)double.PositiveInfinity, (float)0, (float)0, 
+     (float)0.5, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+     (float)0, (float)0, (float)double.PositiveInfinity, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade484()
+{
+    global::TestDrivers.SphereShade
+        ((float)double.PositiveInfinity, (float)0, (float)0, 
+         (float)0.5, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+         (float)0, (float)0, (float)double.PositiveInfinity, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 1, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade56401()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 1, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0.93272614479064941, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade564()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0.93272614479064941, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0.93272614479064941, 
+     (float)double.NegativeInfinity, (float)0.5, 0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade424()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0.93272614479064941, 
+         (float)double.NegativeInfinity, (float)0.5, 0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)(-0.0017226469935849309), (float)0.5, (float)double.NegativeInfinity, 
+     (float)6.2831854820251465, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+     (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+     (float)(-1.9276002645492554), (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade676()
+{
+    global::TestDrivers.SphereShade
+        ((float)(-0.0017226469935849309), (float)0.5, (float)double.NegativeInfinity, 
+         (float)6.2831854820251465, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+         (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+         (float)(-1.9276002645492554), (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)(-0.0017226469935849309), (float)(-1.9276002645492554), (float)0, 
+     (float)6.2831854820251465, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+     (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade768()
+{
+    global::TestDrivers.SphereShade
+        ((float)(-0.0017226469935849309), (float)(-1.9276002645492554), (float)0, 
+         (float)6.2831854820251465, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+         (float)0, (float)0, (float)0, (float)double.NegativeInfinity, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereShade
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereShade820()
+{
+    global::TestDrivers.SphereShade
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereIntersect
+    ((float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)(-1), (float)3.1415927410125732, 
+     (float)2.7182817459106445, (float)double.PositiveInfinity, (float)0, 
+     (float)0.5, (float)0.5, 
+     (float)6.2831854820251465, (float)1.8498828411102295, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereIntersect643()
+{
+    global::TestDrivers.SphereIntersect
+        ((float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)(-1), (float)3.1415927410125732, 
+         (float)2.7182817459106445, (float)double.PositiveInfinity, (float)0, 
+         (float)0.5, (float)0.5, 
+         (float)6.2831854820251465, (float)1.8498828411102295, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereIntersect
+    ((float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereIntersect124()
+{
+    global::TestDrivers.SphereIntersect
+        ((float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereIntersect
+    ((float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)8855, (float)38, (float)0, (float)8365, (float)3, 
+     (float)1, (float)2, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereIntersect979()
+{
+    global::TestDrivers.SphereIntersect
+        ((float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)8855, (float)38, (float)0, (float)8365, (float)3, 
+         (float)1, (float)2, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereIntersect
+    ((float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+                                                       (float)0.93272614479064941, (float)0.5, (float)double.NegativeInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereIntersect269()
+{
+    global::TestDrivers.SphereIntersect
+        ((float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+                                                           (float)0.93272614479064941, (float)0.5, (float)double.NegativeInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.SphereIntersect
+    ((float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void SphereIntersect111()
+{
+    global::TestDrivers.SphereIntersect
+        ((float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.RayTrace((float)0, (float)3.1415927410125732, 
+                             (float)0.5, (float)double.PositiveInfinity, (float)(-1), 
+                             (float)0.5, (float)2.7182817459106445, 
+                             (float)6.2831854820251465, (float)0, (float)1.8498828411102295);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void RayTrace810()
+{
+    global::TestDrivers.RayTrace((float)0, (float)3.1415927410125732, 
+                                 (float)0.5, (float)double.PositiveInfinity, (float)(-1), 
+                                 (float)0.5, (float)2.7182817459106445, 
+                                 (float)6.2831854820251465, (float)0, (float)1.8498828411102295);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.RayTrace((float)0, (float)(-1.2902719974517822), 
+                             (float)1236, (float)(-0.65182769298553467), (float)3.1415927410125732, 
+                             (float)0, (float)(-1.5371415615081787), 
+                             (float)1, (float)0, (float)(-1.9189062118530273));
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void RayTrace894()
+{
+    global::TestDrivers.RayTrace((float)0, (float)(-1.2902719974517822), 
+                                 (float)1236, (float)(-0.65182769298553467), (float)3.1415927410125732, 
+                                 (float)0, (float)(-1.5371415615081787), 
+                                 (float)1, (float)0, (float)(-1.9189062118530273));
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.RayTrace
+    ((float)0, (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+     (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void RayTrace86()
+{
+    global::TestDrivers.RayTrace
+        ((float)0, (float)0, (float)0, (float)double.NegativeInfinity, (float)0, 
+         (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.RayTrace
+    ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+                                                       (float)0.93272614479064941, (float)double.NegativeInfinity, (float)0.5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void RayTrace586()
+{
+    global::TestDrivers.RayTrace
+        ((float)0, (float)0, (float)0, (float)0, (float)0, (float)0, (float)0, 
+                                                           (float)0.93272614479064941, (float)double.NegativeInfinity, (float)0.5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::TestDrivers.RayTrace((float)0, (float)0, (float)0, (float)0, (float)0, 
+                             (float)0, (float)0, (float)0, (float)0, (float)0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::TestDrivers))]
+public void RayTrace91()
+{
+    global::TestDrivers.RayTrace((float)0, (float)0, (float)0, (float)0, (float)0, 
+                                 (float)0, (float)0, (float)0, (float)0, (float)0);
+}
+
+
+ 
+ 

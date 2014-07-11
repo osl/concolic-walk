@@ -1,0 +1,6 @@
+method : Optimization.beale(double,double)
+method : Optimization.freudensteinRoth(double,double)
+method : Optimization.helicalValley(double,double,double)
+method : Optimization.powell(double,double)
+method : Optimization.rosenbrock(double,double)
+method : Optimization.wood(double,double,double,double)

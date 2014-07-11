@@ -1,0 +1,43 @@
+<project>
+  <property name="build.programs.dir" location="./build" />
+
+  <basename property="program" file="${basedir}" />
+  <property name="ant.project.name" value="${program}" />
+
+  <path id="classpath.checkinstr" />
+  <property name="srcdir" location="${basedir}" />
+  <property name="classdir.program"
+	    location="${build.programs.dir}/${program}" />
+
+  <path id="classpath.program">
+    <pathelement location="${classdir.program}" />
+  </path>
+
+  <target name="compile">
+    <echo>>>> Compiling ${program}</echo>
+    <mkdir dir="${classdir.program}" />
+    <javac srcdir="${srcdir}"
+	   destdir="${classdir.program}"
+	   classpathref="classpath.program"
+	   source="1.6"
+	   target="1.6"
+	   debug="true"
+	   includeAntRuntime="false" /> 
+  </target>
+
+  <target name="add-checks" depends="compile">
+    <echo>>>> Adding explicit runtime error checks to ${program}</echo>
+    <apply executable="java"
+	   dir="${classdir.program}"
+	   parallel="true">
+      <arg line="-classpath ${toString:classpath.checkinstr}" />
+      <arg value="edu.illinois.checkinstr.RuntimeCheckInstrumenter" />
+      <arg line="-o ${build.programs.dir}/${program}-checkinstr.jar" />
+      <fileset dir="${classdir.program}" includes="**/*.class" />
+    </apply>
+  </target>
+
+  <target name="clean">
+    <rmdir dir="${classdir.program}" />
+  </target>
+</project>

@@ -1,0 +1,7 @@
+<project>
+  <property name="jpf.arguments" value="+symbolic.dp=choco
+					+symbolic.concolic=true
+					+symbolic.heuristic_walk=true
+					+symbolic.heuristic_walk.tabu_multiplier=1
+					+symbolic.heuristic_walk.tabu_min=5" />
+</project>

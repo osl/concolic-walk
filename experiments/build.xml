@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Build file that coordinates the evaluation experiments of the
+  Concolic Walk implementation.  A full experiment collects the
+  coverage of all unit tests that each test generation tool generates
+  for every target program.
+
+  To run one full experiment use the 'rebuild' target, which is a
+  short-hand for the sequence
+
+    clean-all, compile-programs, generate-tests, run-tests, report.
+
+  Note that the 'run-tests' target does NOT depend on the
+  'generate-tests' target to allow for some fiddling with the
+  generated tests before running them.  For example, the JPF tools
+  sometimes generate invalid test code that does not compile.  The
+  break offers a chance to remove such code.
+
+  The central targets in the build file are
+  * compile-programs: Compiles all target programs in the corpus in
+        'src/programs/java'.
+  * compile-drivers: Compiles each test generator's drivers in
+        'src/drivers/GENERATOR' for all the target programs.
+  * generate-tests: Runs each test generator on every target program.
+        The resulting unit tests are stored in the 'gen/' directory.
+  * compile-tests: Compiles the unit tests resulting from 'generate-tests'.
+  * run-tests: Measures the coverage of the unit tests from
+        'generate-tests'.
+  * report: Produces a coverage report for every test generator and
+         stores it in the 'coverage/' directory.
+
+  Except 'compile-programs' and 'report', all targets have
+  generator-specific sub-targets that can be invoked on their own.
+  For example, it is possible to run 'ant generate-tests-jcute'.
+
+  Most targets use the 'foreach-*' macros defined in this file to
+  launch sub-ant processes (with a given target) on every 'build.xml'
+  or directory within a given sub-directory.  For example, the
+  'compile-drivers-jcute' target executes (the equivalent of) 'ant
+  compile-drivers' on every 'build.xml' within the 'src/drivers/jcute'
+  directory tree.  That way, adding a new driver or target program
+  only requires creating a new sub-directory with a 'build.xml' file.
+
+  The directory- and tool-specific 'build.xml' files have little
+  variation.  To avoid duplication, they therefore import one of the
+  relevant 'common-*.xml' files.  For example, the 'build.xml' files
+  in the 'src/drivers/jcute/' directory import the 'common-jcute.xml'
+  file.
+
+  Each generator-specific 'common-*.xml' file provides three
+  targets: generate-tests, compile-tests, and run-tests.  These
+  targets encapsulate the details of invoking the respective
+  generator and its generated tests.  The generate-tests,
+  compile-tests, and run-tests targets in this file invoke them (via
+  the 'foreach-*' macros).
+-->
+
+<project name="Coverage Evaluation"
+	 default="rebuild"
+	 xmlns:jacoco="antlib:org.jacoco.ant">
+  
+  <property name="project.dir" location=".." />
+  <property name="experiments.dir" location="." />
+
+  <property name="src.dir" location="./src" />
+  <property name="src.programs.dir" location="${src.dir}/programs" />
+  <property name="src.drivers.dir" location="${src.dir}/drivers" />
+
+  <property name="gen.dir" location="./gen" />
+  <property name="gen.timeout" value="30" />
+
+  <property name="res.dir" location="./res" />
+
+  <property name="build.dir" location="./build" />
+  <property name="build.programs.dir" location="${build.dir}/programs" />
+  <property name="build.drivers.dir" location="${build.dir}/drivers" />
+  <property name="build.tests.dir" location="${build.dir}/tests" />
+
+  <property name="report.dir" location="./coverage" />
+
+  <property name="log.file" location="build.log" />
+  <record name="${log.file}" action="start" append="yes" />
+
+  <!--
+      Library and Tool Classpaths
+  -->
+  <property name="tool.brutefuzz.dir"
+	    location="${project.dir}/tools/brutefuzz" />
+  <property name="tool.jacoco.dir"
+	    location="${project.dir}/tools/jacoco" />
+  <property name="tool.jcute.dir"
+	    location="${project.dir}/tools/jcute" />
+  <property name="tool.jpf-core.dir"
+	    location="${project.dir}/tools/jpf/jpf-core" />
+  <property name="tool.jpf-symbc.dir"
+	    location="${project.dir}/tools/jpf/jpf-symbc" />
+  <property name="tool.junit.dir"
+	    location="${project.dir}/tools/junit" />
+  <property name="tool.randoop.dir"
+	    location="${project.dir}/tools/randoop" />
+
+  <path id="classpath.jacoco">
+    <pathelement location="${tool.jacoco.dir}/lib/jacocoant.jar" />
+  </path>
+
+  <path id="classpath.jcute">
+    <pathelement location="${tool.jcute.dir}/jcute.jar" />
+  </path>
+
+  <path id="classpath.junit4">
+    <pathelement location="${tool.junit.dir}/junit-4.11.jar" />
+    <pathelement location="${tool.junit.dir}/hamcrest-core-1.3.jar" />
+  </path>
+
+  <path id="classpath.randoop">
+    <pathelement location="${tool.randoop.dir}/randoop.jar" />
+  </path>
+
+  <taskdef uri="antlib:org.jacoco.ant"
+	   resource="org/jacoco/ant/antlib.xml"
+	   classpathref="classpath.jacoco" />
+
+
+  <!-- Collection of paths used by sub-ant builds -->
+  <propertyset id="subant.arguments">
+    <propertyref name="src.programs.dir" />
+
+    <propertyref name="build.programs.dir" />
+    <propertyref name="build.drivers.dir" />
+    <propertyref name="build.tests.dir" />
+
+    <propertyref name="gen.dir" />
+    <propertyref name="gen.timeout" />
+
+    <propertyref name="res.dir" />
+
+    <propertyref name="project.dir" />
+    <propertyref name="experiments.dir" />
+
+    <propertyref name="tool.brutefuzz.dir" />
+    <propertyref name="tool.jacoco.dir" />
+    <propertyref name="tool.jcute.dir" />
+    <propertyref name="tool.jpf-core.dir" />
+    <propertyref name="tool.jpf-symbc.dir" />
+    <propertyref name="tool.randoop.dir" />
+  </propertyset>
+
+
+  <!--
+      Programs
+  -->
+  <target name="compile-programs">
+    <subant target="compile">
+      <propertyset refid="subant.arguments" />
+      <fileset dir="${src.programs.dir}" includes="**/build.xml" />
+    </subant>
+  </target>
+
+
+  <!--
+      Tool Drivers
+  -->
+
+  <!--
+    Invokes 'ant @{target}' on every 'build.xml' in the
+    'src/drivers/@{tool}/' directory tree.
+  -->
+  <macrodef name="foreach-program-driver-set">
+    <attribute name="tool" />
+    <attribute name="target" />
+    <sequential>
+      <subant target="@{target}">
+	<propertyset refid="subant.arguments" />
+	<reference refid="classpath.jacoco" />
+	<reference refid="classpath.jcute" />
+	<reference refid="classpath.randoop" />
+	<fileset dir="${src.drivers.dir}/@{tool}"
+		 includes="**/build.xml" />
+      </subant>
+    </sequential>
+  </macrodef>
+
+  <target name="compile-drivers"
+	  depends="compile-drivers-brutefuzz,
+		   compile-drivers-jcute,
+		   compile-drivers-jpf-coral,
+		   compile-drivers-jpf-gradient,
+		   compile-drivers-jpf-mixed" />
+
+  <target name="compile-drivers-brutefuzz" depends="compile-programs">
+    <foreach-program-driver-set tool="brutefuzz" target="compile-drivers" />
+  </target>
+
+  <target name="compile-drivers-jcute" depends="compile-programs">
+    <foreach-program-driver-set tool="jcute" target="compile-drivers" />
+  </target>
+
+  <target name="compile-drivers-jpf-coral" depends="compile-programs">
+    <foreach-program-driver-set tool="jpf-coral" target="compile-drivers" />
+  </target>
+
+  <target name="compile-drivers-jpf-gradient" depends="compile-programs">
+    <foreach-program-driver-set tool="jpf-gradient" target="compile-drivers" />
+  </target>
+
+  <target name="compile-drivers-jpf-mixed" depends="compile-programs">
+    <foreach-program-driver-set tool="jpf-mixed" target="compile-drivers" />
+  </target>
+
+  <target name="compile-drivers-jpf-gradient-variations" depends="compile-programs">
+    <foreach-program-driver-set tool="jpf-gradient-iter=10" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-iter=75" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-iter=300" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=3" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=25" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=100" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-nobisect" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-tabu=0-0" target="compile-drivers" />
+    <foreach-program-driver-set tool="jpf-gradient-tabu=1-5" target="compile-drivers" />
+  </target>
+
+
+  <!--
+      Test Generation
+  -->
+  <target name="generate-tests"
+	  depends="generate-tests-brutefuzz,
+		   generate-tests-jcute,
+		   generate-tests-jpf-coral,
+		   generate-tests-jpf-gradient,
+		   generate-tests-jpf-mixed,
+		   generate-tests-pex,
+		   generate-tests-randoop" />
+
+  <target name="generate-tests-brutefuzz" depends="compile-drivers-brutefuzz">
+    <foreach-program-driver-set tool="brutefuzz" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-jcute" depends="compile-drivers-jcute">
+    <foreach-program-driver-set tool="jcute" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-jpf-coral" depends="compile-drivers-jpf-coral">
+    <foreach-program-driver-set tool="jpf-coral" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-jpf-gradient" depends="compile-drivers-jpf-gradient">
+    <foreach-program-driver-set tool="jpf-gradient" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-jpf-mixed" depends="compile-drivers-jpf-mixed">
+    <foreach-program-driver-set tool="jpf-mixed" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-pex">
+    <foreach-program-driver-set tool="pex" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-randoop" depends="compile-programs">
+    <foreach-program-driver-set tool="randoop" target="generate-tests" />
+  </target>
+
+  <target name="generate-tests-jpf-gradient-variations" depends="compile-drivers-jpf-gradient-variations">
+    <foreach-program-driver-set tool="jpf-gradient-iter=10" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-iter=75" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-iter=300" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=3" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=25" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-nb=100" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-nobisect" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-tabu=0-0" target="generate-tests" />
+    <foreach-program-driver-set tool="jpf-gradient-tabu=1-5" target="generate-tests" />
+  </target>
+
+
+  <!--
+      Test Compilation
+  -->
+
+  <!--
+    Invokes 'ant -buildfile @{antFile} @{target}' for every entry in
+    the @{dir} directory.  (Used to invoke ant on all sub-directories
+    in a given @{dir}.)
+  -->
+  <macrodef name="foreach-program">
+    <attribute name="dir" />
+    <attribute name="antFile" />
+    <attribute name="target" />
+    <sequential>
+      <subant genericAntFile="@{antFile}" target="@{target}">
+	<propertyset refid="subant.arguments" />
+	<reference refid="classpath.jacoco" />
+	<reference refid="classpath.junit4" />
+	<reference refid="classpath.jcute" />
+	<dirset dir="@{dir}" includes="*" />
+      </subant>
+    </sequential>
+  </macrodef>
+
+  <target name="compile-tests"
+	  depends="compile-tests-brutefuzz,
+		   compile-tests-jcute,
+		   compile-tests-jpf-coral,
+		   compile-tests-jpf-gradient,
+		   compile-tests-jpf-mixed,
+		   compile-tests-pex,
+		   compile-tests-randoop" />
+
+  <target name="compile-tests-brutefuzz">
+    <foreach-program dir="${gen.dir}/brutefuzz"
+		     antFile="common-brutefuzz.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-jcute">
+    <foreach-program dir="${gen.dir}/jcute"
+		     antFile="common-jcute.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-jpf-coral">
+    <foreach-program dir="${gen.dir}/jpf-coral"
+		     antFile="common-jpf.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-jpf-gradient">
+    <foreach-program dir="${gen.dir}/jpf-gradient"
+		     antFile="common-jpf.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-jpf-mixed">
+    <foreach-program dir="${gen.dir}/jpf-mixed"
+		     antFile="common-jpf.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-pex">
+    <foreach-program dir="${gen.dir}/pex"
+		     antFile="common-pex.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-randoop">
+    <foreach-program dir="${gen.dir}/randoop"
+		     antFile="common-randoop.xml"
+		     target="compile-tests" />
+  </target>
+
+  <target name="compile-tests-jpf-gradient-variations">
+    <foreach-program dir="${gen.dir}/jpf-gradient-iter=10" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-iter=75" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-iter=300" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-nb=3" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-nb=25" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-nb=100" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-nobisect" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-tabu=0-0" antFile="common-jpf.xml" target="compile-tests" />
+    <foreach-program dir="${gen.dir}/jpf-gradient-tabu=1-5" antFile="common-jpf.xml" target="compile-tests" />
+  </target>
+
+
+  <!--
+      Data Collection
+  -->
+  <target name="run-tests"
+	  depends="run-tests-brutefuzz,
+		   run-tests-jcute,
+		   run-tests-jpf-coral,
+		   run-tests-jpf-gradient,
+		   run-tests-jpf-mixed,
+		   run-tests-pex,
+		   run-tests-randoop" />
+
+  <target name="run-tests-brutefuzz" depends="compile-tests-brutefuzz">
+    <foreach-program dir="${build.tests.dir}/brutefuzz"
+		     antFile="common-brutefuzz.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-jcute" depends="compile-tests-jcute">
+    <foreach-program dir="${build.tests.dir}/jcute"
+		     antFile="common-jcute.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-jpf-coral" depends="compile-tests-jpf-coral">
+    <foreach-program dir="${build.tests.dir}/jpf-coral"
+		     antFile="common-jpf.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-jpf-gradient" depends="compile-tests-jpf-gradient">
+    <foreach-program dir="${build.tests.dir}/jpf-gradient"
+		     antFile="common-jpf.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-jpf-mixed" depends="compile-tests-jpf-mixed">
+    <foreach-program dir="${build.tests.dir}/jpf-mixed"
+		     antFile="common-jpf.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-pex" depends="compile-tests-pex">
+    <foreach-program dir="${build.tests.dir}/pex"
+		     antFile="common-pex.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-randoop" depends="compile-tests-randoop">
+    <foreach-program dir="${build.tests.dir}/randoop"
+		     antFile="common-randoop.xml"
+		     target="run-tests" />
+  </target>
+
+  <target name="run-tests-jpf-gradient-variations" depends="compile-tests-jpf-gradient-variations">
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-iter=10" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-iter=75" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-iter=300" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-nb=3" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-nb=25" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-nb=100" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-nobisect" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-tabu=0-0" antFile="common-jpf.xml" target="run-tests" />
+    <foreach-program dir="${build.tests.dir}/jpf-gradient-tabu=1-5" antFile="common-jpf.xml" target="run-tests" />
+  </target>
+
+
+  <!--
+      Report Generation
+  -->
+  <target name="report">
+    <property name="jacoco.antfile"
+	      value="${build.dir}/jacoco-run-reports.xml" />
+
+    <exec executable="bash">
+      <arg value="make-report-tasks.sh" />
+      <arg value="${build.tests.dir}" />
+      <arg value="${jacoco.antfile}" />
+    </exec>
+
+    <ant antfile="${jacoco.antfile}">
+      <reference refid="classpath.jacoco" />
+      <propertyset refid="subant.arguments" />
+    </ant>
+  </target>
+
+  <target name="cumulative-report">
+    <property name="jacoco.antfile"
+	      value="${build.dir}/jacoco-cumulative-reports.xml" />
+
+    <exec executable="bash">
+      <arg value="make-report-tasks.sh" />
+      <arg value="--cumulative" />
+      <arg value="${build.tests.dir}" />
+      <arg value="${jacoco.antfile}" />
+    </exec>
+
+    <ant antfile="${jacoco.antfile}">
+      <reference refid="classpath.jacoco" />
+      <propertyset refid="subant.arguments" />
+    </ant>
+  </target>
+
+  <!--
+      Generic Targets
+  -->
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <target name="clean-all" depends="clean">
+    <delete dir="${gen.dir}" />
+    <delete dir="${report.dir}" />
+    <delete file="${log.file}" />
+  </target>
+
+  <target name="rebuild" depends="clean-all,generate-tests,run-tests,report" />
+</project>

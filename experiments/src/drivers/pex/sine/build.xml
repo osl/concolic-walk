@@ -1,0 +1,4 @@
+<project default="generate-tests">
+  <property name="test.imports" value="--import concolic.MathSin" />
+  <import file="../../../../common-pex.xml"/>
+</project>

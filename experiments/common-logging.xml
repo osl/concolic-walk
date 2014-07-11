@@ -1,0 +1,37 @@
+<project>
+  <property name="log.timestamp.format" value="yyyy-MM-dd HH:mm:ss.SSS" />
+
+  <!--
+      The hint of using antcall to generate a fresh (otherwise
+      immutable) timestamp property was taken from
+      https://stackoverflow.com/questions/1472301/output-timestamp-in-ant
+  -->
+  <target name="echo-timestamped">
+    <tstamp>
+      <format property="event.timestamp" pattern="${log.timestamp.format}" />
+    </tstamp>
+    <echo>${event.timestamp} -- ${message}</echo>
+  </target>
+
+  <macrodef name="echo-begin-generate">
+    <attribute name="tool" />
+    <attribute name="program" />
+    <sequential>
+      <antcall target="echo-timestamped">
+	<param name="message"
+	       value="@{tool}/@{program}: begin test generation" />
+      </antcall>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="echo-end-generate">
+    <attribute name="tool" />
+    <attribute name="program" />
+    <sequential>
+      <antcall target="echo-timestamped">
+	<param name="message"
+	       value="@{tool}/@{program}: end test generation" />
+      </antcall>
+    </sequential>
+  </macrodef>
+</project>

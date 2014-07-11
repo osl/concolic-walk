@@ -1,0 +1,6 @@
+Optimization.beale(double,double):10000
+Optimization.freudensteinRoth(double,double):10000
+Optimization.helicalValley(double,double,double):10000
+Optimization.powell(double,double):10000
+Optimization.rosenbrock(double,double):10000
+Optimization.wood(double,double,double,double):10000

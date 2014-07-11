@@ -1,0 +1,3202 @@
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark91(1, 3);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark91312()
+{
+    JPFBenchmark.Benchmark91(1, 3);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark91(1, -1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark91649()
+{
+    JPFBenchmark.Benchmark91(1, -1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark91(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark91886()
+{
+    JPFBenchmark.Benchmark91(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark84(1, 1, 0, 0.10540925533894598);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark84667()
+{
+    JPFBenchmark.Benchmark84(1, 1, 0, 0.10540925533894598);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark84(0, 0.1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark84567()
+{
+    JPFBenchmark.Benchmark84(0, 0.1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark84(1, 1, 1, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark84676()
+{
+    JPFBenchmark.Benchmark84(1, 1, 1, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark84(1, 1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark84173()
+{
+    JPFBenchmark.Benchmark84(1, 1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark84(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark84198()
+{
+    JPFBenchmark.Benchmark84(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark83(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark83754()
+{
+    JPFBenchmark.Benchmark83(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark82(5.5039569285128163E-19, 181687468304771.53);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark82835()
+{
+    JPFBenchmark.Benchmark82(5.5039569285128163E-19, 181687468304771.53);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark82(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark82754()
+{
+    JPFBenchmark.Benchmark82(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark81(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark81754()
+{
+    JPFBenchmark.Benchmark81(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark80(1.5, -5.0945542005592932E-233);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark80500()
+{
+    JPFBenchmark.Benchmark80(1.5, -5.0945542005592932E-233);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark80(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark80754()
+{
+    JPFBenchmark.Benchmark80(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark79
+    (0.93272612498137941, double.NegativeInfinity, 0.5, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark79528()
+{
+    JPFBenchmark.Benchmark79
+        (0.93272612498137941, double.NegativeInfinity, 0.5, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark79(0, 0, 0, 0, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark79358()
+{
+    JPFBenchmark.Benchmark79(0, 0, 0, 0, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark79(0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark79451()
+{
+    JPFBenchmark.Benchmark79(0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark78(0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark78474()
+{
+    JPFBenchmark.Benchmark78(0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, -7, -8);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77728()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, -7, -8);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, -7, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77635()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, -7, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77866()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, -6, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77862()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, -5, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77196()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, -4, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77459()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, -3, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, -2, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77409()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, -2, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, -1, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77984()
+{
+    JPFBenchmark.Benchmark77(1, 0, -1, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77570()
+{
+    JPFBenchmark.Benchmark77(1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark77(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark77349()
+{
+    JPFBenchmark.Benchmark77(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, -6, -7);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76617()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, -6, -7);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, -6, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76754()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, -6, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76285()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, -5, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76721()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, -4, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76764()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, -3, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, -2, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76265()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, -2, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, -1, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76113()
+{
+    JPFBenchmark.Benchmark76(1, 0, -1, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76568()
+{
+    JPFBenchmark.Benchmark76(1, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark76(0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark76789()
+{
+    JPFBenchmark.Benchmark76(0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75693()
+{
+    JPFBenchmark.Benchmark75(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75957()
+{
+    JPFBenchmark.Benchmark75(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75642()
+{
+    JPFBenchmark.Benchmark75(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75485()
+{
+    JPFBenchmark.Benchmark75(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75499()
+{
+    JPFBenchmark.Benchmark75(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75558()
+{
+    JPFBenchmark.Benchmark75(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 
+     0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark7570()
+{
+    JPFBenchmark.Benchmark75
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 
+         0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75660()
+{
+    JPFBenchmark.Benchmark75
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark75(0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark75789()
+{
+    JPFBenchmark.Benchmark75(0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74951()
+{
+    JPFBenchmark.Benchmark74(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74305()
+{
+    JPFBenchmark.Benchmark74(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74397()
+{
+    JPFBenchmark.Benchmark74(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74944()
+{
+    JPFBenchmark.Benchmark74(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(7, 0.5, 3, double.MinValue, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74618()
+{
+    JPFBenchmark.Benchmark74(7, 0.5, 3, double.MinValue, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 
+     0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74895()
+{
+    JPFBenchmark.Benchmark74
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 
+         0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74607()
+{
+    JPFBenchmark.Benchmark74
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark74(0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark74474()
+{
+    JPFBenchmark.Benchmark74(0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73637()
+{
+    JPFBenchmark.Benchmark73(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73938()
+{
+    JPFBenchmark.Benchmark73(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73563()
+{
+    JPFBenchmark.Benchmark73(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73393()
+{
+    JPFBenchmark.Benchmark73(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73520()
+{
+    JPFBenchmark.Benchmark73(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73170()
+{
+    JPFBenchmark.Benchmark73(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 
+     0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73890()
+{
+    JPFBenchmark.Benchmark73
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 
+         0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73317()
+{
+    JPFBenchmark.Benchmark73
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark73(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark73349()
+{
+    JPFBenchmark.Benchmark73(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72(13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72735()
+{
+    JPFBenchmark.Benchmark72(13, 9, 9.1, 6.6, 6.5, 3, 3.6);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72(7.8, 9, 6.6, 6.5, 3, 3.6, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72617()
+{
+    JPFBenchmark.Benchmark72(7.8, 9, 6.6, 6.5, 3, 3.6, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72(8.6, 7, 6.6, 2.9, 3.6, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72385()
+{
+    JPFBenchmark.Benchmark72(8.6, 7, 6.6, 2.9, 3.6, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72(7, 0.5, 3, double.MinValue, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72426()
+{
+    JPFBenchmark.Benchmark72(7, 0.5, 3, double.MinValue, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 
+     0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72684()
+{
+    JPFBenchmark.Benchmark72
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 
+         0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72377()
+{
+    JPFBenchmark.Benchmark72
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark72(0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark72570()
+{
+    JPFBenchmark.Benchmark72(0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71575()
+{
+    JPFBenchmark.Benchmark71(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71919()
+{
+    JPFBenchmark.Benchmark71(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71329()
+{
+    JPFBenchmark.Benchmark71(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71335()
+{
+    JPFBenchmark.Benchmark71(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71145()
+{
+    JPFBenchmark.Benchmark71(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71105()
+{
+    JPFBenchmark.Benchmark71(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 0, 
+     0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark7112()
+{
+    JPFBenchmark.Benchmark71
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 0, 
+         0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71822()
+{
+    JPFBenchmark.Benchmark71
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark71(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark71288()
+{
+    JPFBenchmark.Benchmark71(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70858()
+{
+    JPFBenchmark.Benchmark70(13.8, 15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70583()
+{
+    JPFBenchmark.Benchmark70(15, 13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70613()
+{
+    JPFBenchmark.Benchmark70(13, 9, 9.1, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70424()
+{
+    JPFBenchmark.Benchmark70(7.8, 9, 6.6, 6.5, 3, 3.6, 0, 0, 0, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70671()
+{
+    JPFBenchmark.Benchmark70(8.6, 7, 6.6, 2.9, 3.6, 0, 0, 0, 0, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0, 0, 0, 
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70885()
+{
+    JPFBenchmark.Benchmark70(7, 0.5, 3, double.MinValue, 0, 0, 0, 0, 0, 0, 0, 0, 
+                             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70
+    (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 0, 
+     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70934()
+{
+    JPFBenchmark.Benchmark70
+        (9.88131291682493E-324, -2.8325168543174093, -0.62688277067687637, 0, 0, 0, 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70
+    (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70598()
+{
+    JPFBenchmark.Benchmark70
+        (-2.8325168543174093, -0.62688277067687637, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark70
+    (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark70929()
+{
+    JPFBenchmark.Benchmark70
+        (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark56(0, 8855, -1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark56205()
+{
+    JPFBenchmark.Benchmark56(0, 8855, -1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark56(0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark5667()
+{
+    JPFBenchmark.Benchmark56(0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark53(0.1, 0.1, -0.9);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark53487()
+{
+    JPFBenchmark.Benchmark53(0.1, 0.1, -0.9);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark53(double.Epsilon, 1, -1.963181379959364);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark53966()
+{
+    JPFBenchmark.Benchmark53(double.Epsilon, 1, -1.963181379959364);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark53(double.MaxValue, -409399220.544307, double.Epsilon);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark53430()
+{
+    JPFBenchmark.Benchmark53(double.MaxValue, -409399220.544307, double.Epsilon);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark53(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark53513()
+{
+    JPFBenchmark.Benchmark53(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark52(double.Epsilon, 1, -1.963181379959364);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark52966()
+{
+    JPFBenchmark.Benchmark52(double.Epsilon, 1, -1.963181379959364);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark52(double.MaxValue, -409399220.544307, double.Epsilon);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark52430()
+{
+    JPFBenchmark.Benchmark52(double.MaxValue, -409399220.544307, double.Epsilon);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark52(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark52513()
+{
+    JPFBenchmark.Benchmark52(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark50(3.1415926535897931, 6.2831853071795862);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark50587()
+{
+    JPFBenchmark.Benchmark50(3.1415926535897931, 6.2831853071795862);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark50(18.129206256761734, double.MaxValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark50427()
+{
+    JPFBenchmark.Benchmark50(18.129206256761734, double.MaxValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark50(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark50886()
+{
+    JPFBenchmark.Benchmark50(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark49(3.1415926535897931, 6.2831853071795862);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark49587()
+{
+    JPFBenchmark.Benchmark49(3.1415926535897931, 6.2831853071795862);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark49(18.129206256761734, double.MaxValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark49427()
+{
+    JPFBenchmark.Benchmark49(18.129206256761734, double.MaxValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark49(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark49886()
+{
+    JPFBenchmark.Benchmark49(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark48(0, 0, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark48690()
+{
+    JPFBenchmark.Benchmark48(0, 0, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark48(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark48513()
+{
+    JPFBenchmark.Benchmark48(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark47(0, 0, 2);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark47420()
+{
+    JPFBenchmark.Benchmark47(0, 0, 2);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark47(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark47513()
+{
+    JPFBenchmark.Benchmark47(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark46(-6.0002212887313142E+40, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark46679()
+{
+    JPFBenchmark.Benchmark46(-6.0002212887313142E+40, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark46(6.0095711857917609, 2, 2, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark46447()
+{
+    JPFBenchmark.Benchmark46(6.0095711857917609, 2, 2, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark46(6.895854497638472E+115, 2, double.NegativeInfinity, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark46258()
+{
+    JPFBenchmark.Benchmark46(6.895854497638472E+115, 2, double.NegativeInfinity, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark46(6.895854497638472E+115, 0, double.NegativeInfinity, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark46424()
+{
+    JPFBenchmark.Benchmark46(6.895854497638472E+115, 0, double.NegativeInfinity, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark46(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark46527()
+{
+    JPFBenchmark.Benchmark46(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45
+    (double.Epsilon, 3.1415926535897931, double.NegativeInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45399()
+{
+    JPFBenchmark.Benchmark45
+        (double.Epsilon, 3.1415926535897931, double.NegativeInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45
+    (-0.62688277067687637, -2.8325168543174093, 9.88131291682493E-324);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45646()
+{
+    JPFBenchmark.Benchmark45
+        (-0.62688277067687637, -2.8325168543174093, 9.88131291682493E-324);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45(6.2831853071795862, 2, 5.536753735532308);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45623()
+{
+    JPFBenchmark.Benchmark45(6.2831853071795862, 2, 5.536753735532308);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45(0.5, 2.6447793675031046, double.MaxValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45889()
+{
+    JPFBenchmark.Benchmark45(0.5, 2.6447793675031046, double.MaxValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45(0.93272612498137941, 0.5, double.NegativeInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45836()
+{
+    JPFBenchmark.Benchmark45(0.93272612498137941, 0.5, double.NegativeInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark45(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark45513()
+{
+    JPFBenchmark.Benchmark45(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark44(3, 2);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark44542()
+{
+    JPFBenchmark.Benchmark44(3, 2);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark44(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark44886()
+{
+    JPFBenchmark.Benchmark44(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark43(double.NegativeInfinity, 6.895854497638472E+115);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark43926()
+{
+    JPFBenchmark.Benchmark43(double.NegativeInfinity, 6.895854497638472E+115);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark43(3, 2);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark43542()
+{
+    JPFBenchmark.Benchmark43(3, 2);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark43(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark43886()
+{
+    JPFBenchmark.Benchmark43(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark42(0.93272612498137941, 0.5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark42968()
+{
+    JPFBenchmark.Benchmark42(0.93272612498137941, 0.5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark42(3, 2);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark42542()
+{
+    JPFBenchmark.Benchmark42(3, 2);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark42(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark42886()
+{
+    JPFBenchmark.Benchmark42(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark41(0, -1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark41764()
+{
+    JPFBenchmark.Benchmark41(0, -1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark41(double.PositiveInfinity, double.MaxValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark41871()
+{
+    JPFBenchmark.Benchmark41(double.PositiveInfinity, double.MaxValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark41(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark41886()
+{
+    JPFBenchmark.Benchmark41(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark40(0, -1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark40764()
+{
+    JPFBenchmark.Benchmark40(0, -1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark40(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark40886()
+{
+    JPFBenchmark.Benchmark40(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark39(0, 2);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark3932()
+{
+    JPFBenchmark.Benchmark39(0, 2);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark39(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark39886()
+{
+    JPFBenchmark.Benchmark39(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark38(56294995342131.211, 36146600823239.992);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark3823()
+{
+    JPFBenchmark.Benchmark38(56294995342131.211, 36146600823239.992);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark38(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark38886()
+{
+    JPFBenchmark.Benchmark38(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark35(4, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark35539()
+{
+    JPFBenchmark.Benchmark35(4, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark35(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark35886()
+{
+    JPFBenchmark.Benchmark35(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark34(1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark34477()
+{
+    JPFBenchmark.Benchmark34(1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark34(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark34599()
+{
+    JPFBenchmark.Benchmark34(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark33(0.93272612498137941);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark33618()
+{
+    JPFBenchmark.Benchmark33(0.93272612498137941);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark33(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark33599()
+{
+    JPFBenchmark.Benchmark33(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark32(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark32599()
+{
+    JPFBenchmark.Benchmark32(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark29(6.895854497638472E+115);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark2915()
+{
+    JPFBenchmark.Benchmark29(6.895854497638472E+115);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark29(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark29599()
+{
+    JPFBenchmark.Benchmark29(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark27(2.7182818284590451, -1, 5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark27439()
+{
+    JPFBenchmark.Benchmark27(2.7182818284590451, -1, 5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark27(0.5, double.MinValue, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark27770()
+{
+    JPFBenchmark.Benchmark27(0.5, double.MinValue, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark27(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark27513()
+{
+    JPFBenchmark.Benchmark27(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark26
+    (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark26470()
+{
+    JPFBenchmark.Benchmark26
+        (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark26(0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark26805()
+{
+    JPFBenchmark.Benchmark26(0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark25
+    (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark25470()
+{
+    JPFBenchmark.Benchmark25
+        (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark25(0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark25805()
+{
+    JPFBenchmark.Benchmark25(0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark23(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark23527()
+{
+    JPFBenchmark.Benchmark23(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark22
+    (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark2266()
+{
+    JPFBenchmark.Benchmark22
+        (0.93272612498137941, 0.5, double.NegativeInfinity, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark22(0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark2255()
+{
+    JPFBenchmark.Benchmark22(0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark21(0.5, 6.2831853071795862);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark21594()
+{
+    JPFBenchmark.Benchmark21(0.5, 6.2831853071795862);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark21(-0.62688277067687637, -2.8325168543174093);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark21758()
+{
+    JPFBenchmark.Benchmark21(-0.62688277067687637, -2.8325168543174093);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark21(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark21886()
+{
+    JPFBenchmark.Benchmark21(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark20(double.Epsilon, double.MinValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark20710()
+{
+    JPFBenchmark.Benchmark20(double.Epsilon, double.MinValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark20(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark20886()
+{
+    JPFBenchmark.Benchmark20(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark19(1, -1, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark19577()
+{
+    JPFBenchmark.Benchmark19(1, -1, 1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark19(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark19513()
+{
+    JPFBenchmark.Benchmark19(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark18(1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark18477()
+{
+    JPFBenchmark.Benchmark18(1);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark18(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark18599()
+{
+    JPFBenchmark.Benchmark18(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark17(0.93272612498137941);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark17618()
+{
+    JPFBenchmark.Benchmark17(0.93272612498137941);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark17(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark17599()
+{
+    JPFBenchmark.Benchmark17(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark16(0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark16805()
+{
+    JPFBenchmark.Benchmark16(0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark15(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark15527()
+{
+    JPFBenchmark.Benchmark15(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark14
+    (0.93272612498137941, 0.5, double.NegativeInfinity, 6.895854497638472E+115);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark1493()
+{
+    JPFBenchmark.Benchmark14
+        (0.93272612498137941, 0.5, double.NegativeInfinity, 6.895854497638472E+115);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark14(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark14527()
+{
+    JPFBenchmark.Benchmark14(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark13(1, 2, 3, 5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark1386()
+{
+    JPFBenchmark.Benchmark13(1, 2, 3, 5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark13(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark13527()
+{
+    JPFBenchmark.Benchmark13(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark12(3, 2, 4, 5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark12547()
+{
+    JPFBenchmark.Benchmark12(3, 2, 4, 5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark12(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark12527()
+{
+    JPFBenchmark.Benchmark12(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark11(1, 2, 3, 5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark1186()
+{
+    JPFBenchmark.Benchmark11(1, 2, 3, 5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark11(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark11527()
+{
+    JPFBenchmark.Benchmark11(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark10(0.5, double.MinValue, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark10770()
+{
+    JPFBenchmark.Benchmark10(0.5, double.MinValue, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark10(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark10513()
+{
+    JPFBenchmark.Benchmark10(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark09(double.NegativeInfinity, 6.895854497638472E+115);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark09926()
+{
+    JPFBenchmark.Benchmark09(double.NegativeInfinity, 6.895854497638472E+115);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark09(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark09886()
+{
+    JPFBenchmark.Benchmark09(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark08(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark08513()
+{
+    JPFBenchmark.Benchmark08(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark07(0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark07527()
+{
+    JPFBenchmark.Benchmark07(0, 0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark06(0.93272612498137941, double.NegativeInfinity, 0.5);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark06434()
+{
+    JPFBenchmark.Benchmark06(0.93272612498137941, double.NegativeInfinity, 0.5);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark06(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark06513()
+{
+    JPFBenchmark.Benchmark06(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark05(0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark05513()
+{
+    JPFBenchmark.Benchmark05(0, 0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark04(double.NegativeInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark04230()
+{
+    JPFBenchmark.Benchmark04(double.NegativeInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark04(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark04599()
+{
+    JPFBenchmark.Benchmark04(0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark03(double.MaxValue, double.MaxValue);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark03543()
+{
+    JPFBenchmark.Benchmark03(double.MaxValue, double.MaxValue);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark03(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark03886()
+{
+    JPFBenchmark.Benchmark03(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark02(6.895854497638472E+115, double.NegativeInfinity);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark0213()
+{
+    JPFBenchmark.Benchmark02(6.895854497638472E+115, double.NegativeInfinity);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark02(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark02886()
+{
+    JPFBenchmark.Benchmark02(0, 0);
+}
+
+
+ 
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark01(0.5, 0.93272612498137941);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark01933()
+{
+    JPFBenchmark.Benchmark01(0.5, 0.93272612498137941);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+JPFBenchmark.Benchmark01(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(JPFBenchmark))]
+public void Benchmark01886()
+{
+    JPFBenchmark.Benchmark01(0, 0);
+}
+
+
+ 
+ 

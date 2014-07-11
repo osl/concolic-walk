@@ -1,0 +1,6 @@
+<project>
+  <property name="jpf.arguments" value="+symbolic.dp=choco
+					+symbolic.concolic=true
+					+symbolic.concolic.MAX_TRIES=3
+					+symbolic.heuristicRandom=true" />
+</project>

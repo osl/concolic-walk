@@ -1,0 +1,85 @@
+<project xmlns:jacoco="antlib:org.jacoco.ant">
+
+  <basename property="program" file="${basedir}" />
+  <property name="ant.project.name" value="${program} driver" />
+  <import file="common-logging.xml" />
+
+  <!--
+      Must set build.programs.dir, build.drivers.dir,
+      build.tests.dir, gen.dir
+  -->
+  <path id="classpath.jcute" />
+  <path id="classpath.jacoco" />
+  <property name="srcdir" location="${basedir}" />
+  <property name="classdir.program" value="${build.programs.dir}/${program}" />
+  <property name="classdir.drivers" value="${build.drivers.dir}/randoop/${program}" />
+  <property name="classdir.tests" value="${build.tests.dir}/randoop/${program}" />
+  <property name="gendir.tests" value="${gen.dir}/randoop/${program}" />
+
+  <!-- Import program-specific class path from program's build.xml -->
+  <path id="classpath.program" />
+  <import file="${src.programs.dir}/${program}/build.xml" />
+
+
+  <path id="classpath.drivers">
+    <path refid="classpath.program" />
+    <path refid="classpath.randoop" />
+    <pathelement path="${classdir.program}" />
+  </path>
+
+  <path id="classpath.tests">
+    <pathelement path="${classdir.program}" />
+    <pathelement path="${classdir.tests}" />
+    <path refid="classpath.program" />
+    <path refid="classpath.jcute" /> <!-- includes jUnit 3 -->
+  </path>
+
+  <target name="generate-tests">
+    <echo-begin-generate tool="randoop" program="${program}" />
+    <echo>>>> Generating Randoop tests for ${program}</echo>
+    <mkdir dir="${gendir.tests}" />
+
+    <tstamp prefix="randoop">
+      <format property="SEED" pattern="1HmssS" />
+    </tstamp>
+
+    <java classname="randoop.main.Main"
+	  classpathref="classpath.drivers"
+	  fork="true">
+      <arg value="gentests" />
+      <arg value="--classlist=${srcdir}/classlist" />
+      <arg value="--methodlist=${srcdir}/methodlist" />
+      <arg value="--junit-output-dir=${gendir.tests}" />
+      <arg value="--output-tests=all" />
+      <arg value="--literals-level=ALL" />
+      <arg value="--inputlimit=75000" />
+      <arg value="--timelimit=${gen.timeout}" />
+      <arg value="--randomseed=${randoop.SEED}" />
+    </java>
+    <echo-end-generate tool="randoop" program="${program}" />
+  </target>
+
+  <target name="compile-tests">
+    <echo>>>> Compiling Randoop tests for ${program}</echo>
+    <mkdir dir="${classdir.tests}" />
+    <javac srcdir="${srcdir}"
+	   destdir="${classdir.tests}"
+	   classpathref="classpath.tests"
+	   debug="true"
+	   includeAntRuntime="false">
+    </javac>
+  </target>
+
+  <target name="run-tests">
+    <echo>>>> Collecting coverage of Randoop tests for ${program}</echo>
+    <jacoco:agent property="agent.vmparam"
+		  destfile="jacoco.exec"
+		  append="false" />
+    <java classname="RandoopTest"
+	  classpathref="classpath.tests"
+	  fork="true">
+      <jvmarg value="${agent.vmparam}" />
+      <redirector output="run_tests.log" append="false" />
+    </java>
+  </target>
+</project>

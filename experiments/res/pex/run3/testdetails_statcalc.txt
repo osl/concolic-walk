@@ -1,0 +1,34 @@
+ 
+ 
+--- Description
+passing test
+ 
+TestStatCalc.Run(3);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TestStatCalc))]
+public void Run94201()
+{
+    TestStatCalc.Run(3);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+TestStatCalc.Run(0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(TestStatCalc))]
+public void Run5101()
+{
+    TestStatCalc.Run(0);
+}
+
+
+ 
+ 

@@ -1,0 +1,110 @@
+ 
+ 
+--- Description
+failing test: AssertFailedException, Exception of type 'Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException' was thrown.
+ 
+DART.Test(55594536, 20);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+[PexRaisedException(typeof(AssertFailedException))]
+public void TestThrowsAssertFailedException817()
+{
+    DART.Test(55594536, 20);
+}
+
+
+ 
+--- Exception details
+ 
+Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException: Exception of type 'Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException' was thrown.    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\DartTest\DART.cs(35): at System.Void Concolic.DART.Abort() 
+    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\DartTest\DART.cs(28): at System.Void Concolic.DART.Test(System.Int32 x, System.Int32 y) 
+ 
+ 
+--- Description
+failing test: AssertFailedException, Exception of type 'Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException' was thrown.
+ 
+DART.Test(308, 10);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+[PexRaisedException(typeof(AssertFailedException))]
+public void TestThrowsAssertFailedException752()
+{
+    DART.Test(308, 10);
+}
+
+
+ 
+--- Exception details
+ 
+Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException: Exception of type 'Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException' was thrown.    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\DartTest\DART.cs(35): at System.Void Concolic.DART.Abort() 
+    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\DartTest\DART.cs(21): at System.Void Concolic.DART.Test(System.Int32 x, System.Int32 y) 
+ 
+ 
+--- Description
+passing test
+ 
+DART.Test(308, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+public void Test92601()
+{
+    DART.Test(308, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+DART.Test(0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+public void Test88601()
+{
+    DART.Test(0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+DART.Test(55594536, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+public void Test59101()
+{
+    DART.Test(55594536, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+DART.Test(-412552246, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(DART))]
+public void Test24201()
+{
+    DART.Test(-412552246, 0);
+}
+
+
+ 
+ 

@@ -1,0 +1,22 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/bytecode/INVOKEVIRTUAL.java b/src/main/gov/nasa/jpf/symbc/bytecode/INVOKEVIRTUAL.java
+index 4bd467b..54be927 100644
+--- a/src/main/gov/nasa/jpf/symbc/bytecode/INVOKEVIRTUAL.java
++++ b/src/main/gov/nasa/jpf/symbc/bytecode/INVOKEVIRTUAL.java
+@@ -18,6 +18,7 @@
+ //
+ package gov.nasa.jpf.symbc.bytecode;
+ 
++import gov.nasa.jpf.vm.ClassInfo;
+ import gov.nasa.jpf.vm.Instruction;
+ import gov.nasa.jpf.vm.MethodInfo;
+ import gov.nasa.jpf.vm.ThreadInfo;
+@@ -42,7 +43,8 @@ public class INVOKEVIRTUAL extends gov.nasa.jpf.jvm.bytecode.INVOKEVIRTUAL {
+ 	    MethodInfo mi = getInvokedMethod(th, objRef);
+ 
+ 	    if (mi == null) {
+-	      String clsName = th.getClassInfo(objRef).getName();
++	      ClassInfo ci = th.getClassInfo(objRef);
++	      String clsName = (ci != null) ? ci.getName() : "?UNKNOWN?";
+ 	      return th.createAndThrowException("java.lang.NoSuchMethodError", clsName + '.' + mname);
+ 	    }
+ 	    

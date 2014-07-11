@@ -1,0 +1,3 @@
+<project default="compile">
+  <import file="../common.xml"/>
+</project>

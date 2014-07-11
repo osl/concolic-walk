@@ -1,0 +1,265 @@
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic825()
+{
+    global::Tcas.Start_symbolic(601, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic998()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic76()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+}
+
+
+ 
+ 
+--- Description
+failing test: IndexOutOfRangeException, Index was outside the bounds of the array.
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+[PexRaisedException(typeof(IndexOutOfRangeException))]
+public void Start_symbolicThrowsIndexOutOfRangeException223()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0);
+}
+
+
+ 
+--- Exception details
+ 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\TcasTest\Tcas.cs(79): at System.Int32 Tcas.ALIM() 
+    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\TcasTest\Tcas.cs(100): at System.Int32 Tcas.Non_Crossing_Biased_Climb() 
+    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\TcasTest\Tcas.cs(154): at System.Int32 Tcas.Alt_sep_test() 
+    C:\Users\pdinges\Documents\Visual Studio 2010\Projects\ClassLibrary2\TcasTest\Tcas.cs(239): at System.Void Tcas.Start_symbolic(System.Int32 cur_vertical_sep, System.Int32 high_confidence, System.Int32 two_of_three_reports_valid, System.Int32 own_tracked_alt, System.Int32 own_tracked_alt_rate, System.Int32 other_tracked_alt, System.Int32 alt_layer_value, System.Int32 up_separation, System.Int32 down_separation, System.Int32 other_rac, System.Int32 other_capability, System.Int32 climb_inhibit) 
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 1, 2, 641, 640, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic179()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 1, 2, 641, 640, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 2, 1023, 1023, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic908()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 2, 1023, 1023, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic892()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic784()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic342()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic185()
+{
+    global::Tcas.Start_symbolic(601, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic406()
+{
+    global::Tcas.Start_symbolic(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 1, 0, 0, 601, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic230()
+{
+    global::Tcas.Start_symbolic(0, 1, 0, 0, 601, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic125()
+{
+    global::Tcas.Start_symbolic(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic607()
+{
+    global::Tcas.Start_symbolic(0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic306()
+{
+    global::Tcas.Start_symbolic(0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 
+--- Description
+passing test
+ 
+global::Tcas.Start_symbolic(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+ 
+[TestMethod]
+[PexGeneratedBy(typeof(global::Tcas))]
+public void Start_symbolic205()
+{
+    global::Tcas.Start_symbolic(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+
+
+ 
+ 

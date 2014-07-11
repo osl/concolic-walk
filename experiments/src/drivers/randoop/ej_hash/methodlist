@@ -1,0 +1,5 @@
+method : EffectiveJavaHashCode.testCollision1(int,long,int,int,long,int)
+method : EffectiveJavaHashCode.testCollision2(long,int,long,int)
+method : EffectiveJavaHashCode.testCollision3(long,long)
+method : EffectiveJavaHashCode.testCollision4(int,long,int)
+method : EffectiveJavaHashCode.testCollision5(long,int)

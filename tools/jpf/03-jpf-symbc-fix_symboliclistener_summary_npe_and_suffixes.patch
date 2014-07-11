@@ -1,0 +1,36 @@
+diff --git a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+index c927b3e..ed656b5 100644
+--- a/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
++++ b/src/main/gov/nasa/jpf/symbc/SymbolicListener.java
+@@ -455,9 +455,19 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 						  token = st.nextToken();
+ 					  if (pc.contains(token)){
+ 						  String temp = pc.substring(pc.indexOf(token));
++						  if (temp.indexOf(']') < 0) {
++						      continue;
++						  }
+ 						  String val = temp.substring(temp.indexOf("[")+1,temp.indexOf("]"));
+-						  if(actualType == Types.T_INT || actualType == Types.T_FLOAT || actualType == Types.T_LONG || actualType == Types.T_DOUBLE)
+-							  testCase = testCase + val + ",";
++						  if(actualType == Types.T_INT || actualType == Types.T_FLOAT || actualType == Types.T_LONG || actualType == Types.T_DOUBLE) {
++						      String suffix = "";
++						      if (actualType == Types.T_LONG) {
++							  suffix = "l";
++						      } else if (actualType == Types.T_FLOAT) {
++							  suffix = "f";
++						      }
++						      testCase = testCase + val + suffix + ",";
++						  }
+ 						  else if (actualType == Types.T_BOOLEAN){ //translate boolean values represented as ints
+ 							  //to "true" or "false"
+ 							  if (val.equalsIgnoreCase("0"))
+@@ -528,6 +538,9 @@ public class SymbolicListener extends PropertyListenerAdapter implements Publish
+ 						  token = st.nextToken();
+ 					  if (pc.contains(token)){
+ 						  String temp = pc.substring(pc.indexOf(token));
++						  if (temp.indexOf(']') < 0) {
++						      continue;
++						  }
+ 						  String val = temp.substring(temp.indexOf("[")+1,temp.indexOf("]"));
+ 					      if(actualType == Types.T_INT || actualType == Types.T_FLOAT || actualType == Types.T_LONG || actualType == Types.T_DOUBLE)
+ 							  testCase = testCase + "<td>" + val + "</td>";

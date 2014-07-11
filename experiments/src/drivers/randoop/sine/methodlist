@@ -1,0 +1,2 @@
+cons : concolic.MathSin.<init>()
+method : concolic.MathSin.mysin(double)

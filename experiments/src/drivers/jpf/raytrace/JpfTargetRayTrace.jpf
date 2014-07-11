@@ -1,0 +1,5 @@
+@include common-raytrace.properties
+
+# Set application classpath via the command line: '+classpath=...'
+
+target = JpfTargetRayTrace
